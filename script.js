@@ -305,16 +305,16 @@ Annual Inter-College Drone & Robotics Techfest
 
 • Organizer: Tripura Institute of Technology, Narsingarh, Agartala - 799009
 • Event Dates: Starting 22nd September
-• Expected Footfall: 1,500+ Engineering & Technical Students from across Tripura
-• Participating Institutes: All 9 Technical Colleges in Tripura (TIT, NITA, ICFAI, Techno, Polytechnics)
-• Utkarsh 4.0 Title Sponsor: Triumph Motorcycles
+• Expected Footfall: 2,000+ Engineering & Technical Students from across Tripura
+• Participating Institutes: All 11 Technical Colleges in Tripura
+• Core Deliverables: Logo on Banners, Dedicated Stall & Influencer Reel Coverage
 
 SPONSORSHIP SLOTS:
-- Title Sponsor (1 Slot): ₹1,00,000 (Fest Co-Naming, 20x20 ft Quad Stall, Keynote Address)
-- Powered By Partner (2 Slots): ₹60,000 (Entrance Arch, 15x15 ft Stall, Kit Inserts)
-- Gold Track Sponsor (4 Slots): ₹35,000 (Arena Naming, 10x10 ft Stall)
-- Silver Sponsor (6 Slots): ₹20,000 (8x8 ft Stall, Website Recognition)
-- Custom / In-Kind: Flexible
+- Title Sponsor (1 Exclusive Slot): Quote on Discussion (Fest Co-Naming, 20x20 ft Quad Stall, Keynote, Influencer Reels)
+- Powered By Partner (2 Slots): Quote on Discussion (Entrance Arch, 15x15 ft Stall, Kit Inserts, Influencer Coverage)
+- Gold Track Sponsor (4 Slots): Quote on Discussion (Arena Naming, 10x10 ft Stall, Influencer Feature)
+- Silver Sponsor (6 Slots): Quote on Discussion (8x8 ft Stall, Banners & Social Spotlight)
+- Custom / In-Kind: Tailored product/equipment support & brand visibility
 
 CONTACT SECRETARIAT:
 Email: utkarsh@titagartala.ac.in | Phone: +91 98765 43210

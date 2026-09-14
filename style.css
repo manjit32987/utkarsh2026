@@ -790,13 +790,23 @@ img {
 }
 
 .slot-price {
-  font-family: 'Space Grotesk', sans-serif;
-  font-size: 2.15rem;
-  font-weight: 800;
-  color: var(--text-main);
   margin-bottom: 1.25rem;
-  padding-bottom: 1.25rem;
+  padding-bottom: 1rem;
   border-bottom: 1px dashed var(--border);
+}
+
+.price-quote {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary);
+  background: rgba(2, 132, 199, 0.08);
+  border: 1px solid rgba(2, 132, 199, 0.2);
+  padding: 0.4rem 0.9rem;
+  border-radius: var(--radius-full);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
 }
 
 .slot-list {
