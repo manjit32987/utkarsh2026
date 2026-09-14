@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCountdown();
   initSmoothScroll();
   initLoopingVideos();
+  initMobileNav();
 });
 
 // Auto-play all videos on continuous loop without clicking
@@ -88,7 +89,60 @@ function initSmoothScroll() {
   });
 }
 
-// 3. Sponsorship Slot Modal
+// 3. Mobile Navigation Drawer Toggle
+function initMobileNav() {
+  const toggle = document.getElementById('navToggle');
+  const navContainer = document.getElementById('navContainer');
+  const navLinks = document.querySelectorAll('.nav-link');
+
+  if (!toggle || !navContainer) return;
+
+  toggle.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const isOpen = navContainer.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', isOpen);
+    const icon = toggle.querySelector('i');
+    if (icon) {
+      if (isOpen) {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-xmark');
+      } else {
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+      }
+    }
+  });
+
+  // Close when clicking any nav link
+  navLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      if (navContainer.classList.contains('open')) {
+        navContainer.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+        const icon = toggle.querySelector('i');
+        if (icon) {
+          icon.classList.remove('fa-xmark');
+          icon.classList.add('fa-bars');
+        }
+      }
+    });
+  });
+
+  // Close when clicking outside
+  document.addEventListener('click', (e) => {
+    if (navContainer.classList.contains('open') && !navContainer.contains(e.target) && !toggle.contains(e.target)) {
+      navContainer.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+      const icon = toggle.querySelector('i');
+      if (icon) {
+        icon.classList.remove('fa-xmark');
+        icon.classList.add('fa-bars');
+      }
+    }
+  });
+}
+
+// 4. Sponsorship Slot Modal
 function openSponsorModal(tierName) {
   const modal = document.getElementById('sponsorModal');
   const badge = document.getElementById('modalSelectedTierName');
