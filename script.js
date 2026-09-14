@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initCountdown();
   initGalleryFilters();
   initLocalPhotoUploader();
+  initLocalVideoUploader();
   initSmoothScroll();
 });
 
@@ -213,6 +214,7 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
     closeSponsorModal();
     closeLightboxDirect();
+    closeVideoPlayer();
   }
 });
 
@@ -347,3 +349,62 @@ function initSmoothScroll() {
     });
   });
 }
+
+// ==========================================
+// 11. Video Player Modal Logic
+// ==========================================
+function openVideoPlayer(videoUrl, title) {
+  const modal = document.getElementById('videoModal');
+  const video = document.getElementById('modalActiveVideo');
+  const source = document.getElementById('modalVideoSource');
+  const titleEl = document.getElementById('modalVideoTitle');
+
+  if (modal && video && source) {
+    source.src = videoUrl;
+    video.load();
+    if (titleEl) titleEl.innerText = title || 'Utkarsh 5.0 Event Video';
+    modal.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    
+    // Play video with audio enabled
+    video.play().catch(e => console.log('Autoplay handled:', e));
+  }
+}
+
+function closeVideoPlayer() {
+  const modal = document.getElementById('videoModal');
+  const video = document.getElementById('modalActiveVideo');
+
+  if (modal) {
+    modal.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  if (video) {
+    video.pause();
+    video.currentTime = 0;
+  }
+}
+
+function handleVideoModalOutsideClick(event) {
+  if (event.target.id === 'videoModal') {
+    closeVideoPlayer();
+  }
+}
+
+// ==========================================
+// 12. Local Video Uploader for Organizers
+// ==========================================
+function initLocalVideoUploader() {
+  const videoInput = document.getElementById('localVideoInput');
+  if (!videoInput) return;
+
+  videoInput.addEventListener('change', (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const fileUrl = URL.createObjectURL(file);
+    showToast(`Loaded "${file.name}"! Opening video player...`);
+    openVideoPlayer(fileUrl, file.name.replace(/\.[^/.]+$/, ""));
+  });
+}
+
