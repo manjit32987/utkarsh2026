@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Utkarsh 5.0 | Tripura Institute of Technology - Inter-College Drone & Robotics Techfest</title>
-  <meta name="description" content="Tripura Institute of Technology presents Utkarsh 5.0 - Tripura's premier inter-college drone racing and combat robotics techfest. Explore sponsorship slots, expected 1500+ footfall, and event highlights.">
-  <meta name="keywords" content="Utkarsh 5.0, Tripura Institute of Technology, TIT Agartala, Drone Racing, Robotics Competition, Techfest Tripura, Sponsorship Slots, Triumph Title Sponsor">
-  
-  <!-- Fonts & Icons -->
+  <title>Utkarsh 5.0 | Tripura Institute of Technology - Drone & Robotics Techfest</title>
+  <meta name="description" content="Tripura Institute of Technology presents Utkarsh 5.0 - Tripura's premier inter-college drone racing and robotics techfest. Explore sponsorship slots, 1500+ expected footfall, and event highlights.">
+
+  <!-- Google Fonts & FontAwesome -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
   <link rel="stylesheet" href="style.css">
@@ -18,166 +17,131 @@
 <body>
 
   <!-- Top Announcement Bar -->
-  <div style="background: linear-gradient(90deg, #0284c7, #2563eb, #7c3aed); color: #fff; padding: 0.5rem 1rem; text-align: center; font-size: 0.85rem; font-weight: 600;">
-    <span>🚀 <strong>Utkarsh 5.0 Official Sponsorship Portal:</strong> Partner with Tripura's biggest robotics & drone gathering. Limited sponsorship slots available!</span>
+  <div style="background: linear-gradient(90deg, #0284c7, #2563eb, #7c3aed); color: #fff; padding: 0.45rem 1rem; text-align: center; font-size: 0.85rem; font-weight: 600;">
+    <span>🚀 <strong>Utkarsh 5.0:</strong> Tripura's biggest robotics & drone techfest. Limited sponsorship slots available!</span>
   </div>
 
-  <!-- Header / Navigation -->
-  <header class="site-header" id="header">
-    <div class="container nav-container">
-      <a href="#hero" class="brand-logo-group" aria-label="Utkarsh 5.0 Home">
-        <div class="college-crest">
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="#hero" class="brand-box">
+        <div class="brand-icon">
           <i class="fa-solid fa-microchip"></i>
         </div>
-        <div class="brand-text-col">
-          <div class="brand-title">UTKARSH <span>5.0</span></div>
+        <div>
+          <div class="brand-name">UTKARSH <span>5.0</span></div>
           <div class="brand-sub">Tripura Institute of Technology (TIT)</div>
         </div>
       </a>
 
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#about" class="nav-link">About</a></li>
-          <li><a href="#why-sponsor" class="nav-link">Why Sponsor</a></li>
-          <li><a href="#slots" class="nav-link">Sponsorship Slots</a></li>
-          <li><a href="#competitions" class="nav-link">Competitions</a></li>
-          <li><a href="#triumph-throwback" class="nav-link">Utkarsh 4.0 & Triumph</a></li>
-          <li><a href="#gallery" class="nav-link">Gallery</a></li>
-          <li><a href="#contact" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link">Welcome</a></li>
+        <li><a href="#why-sponsor" class="nav-link">Why Sponsor</a></li>
+        <li><a href="#centerstage" class="nav-link">Highlights</a></li>
+        <li><a href="#videos" class="nav-link">Videos</a></li>
+        <li><a href="#slots" class="nav-link">Sponsorship Slots</a></li>
+        <li><a href="#triumph" class="nav-link">Utkarsh 4.0 & Triumph</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
 
-      <div class="nav-actions">
-        <button class="btn-secondary btn-sm" onclick="downloadBrochure()">
-          <i class="fa-solid fa-file-pdf"></i> Brochure
+      <div style="display: flex; gap: 0.75rem;">
+        <button class="btn btn-secondary" onclick="downloadBrochure()">
+          <i class="fa-solid fa-file-arrow-down"></i> Brochure
         </button>
-        <a href="#slots" class="btn-primary btn-sm">
+        <a href="#slots" class="btn btn-primary">
           <i class="fa-solid fa-handshake"></i> Become a Sponsor
         </a>
-        <button class="mobile-menu-toggle" id="mobileMenuBtn" aria-label="Toggle menu">
-          <i class="fa-solid fa-bars"></i>
-        </button>
       </div>
     </div>
   </header>
 
-  <!-- Mobile Drawer Menu -->
-  <div id="mobileMenu" style="display: none; background: #ffffff; border-bottom: 2px solid #e2e8f0; padding: 1.5rem 2rem;">
-    <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem;">
-      <li><a href="#about" class="nav-link" onclick="toggleMobileMenu()">About</a></li>
-      <li><a href="#why-sponsor" class="nav-link" onclick="toggleMobileMenu()">Why Sponsor</a></li>
-      <li><a href="#slots" class="nav-link" onclick="toggleMobileMenu()">Sponsorship Slots</a></li>
-      <li><a href="#competitions" class="nav-link" onclick="toggleMobileMenu()">Competitions</a></li>
-      <li><a href="#triumph-throwback" class="nav-link" onclick="toggleMobileMenu()">Utkarsh 4.0 Flashback</a></li>
-      <li><a href="#gallery" class="nav-link" onclick="toggleMobileMenu()">Photo Gallery</a></li>
-      <li><a href="#contact" class="nav-link" onclick="toggleMobileMenu()">Contact</a></li>
-      <li style="padding-top: 0.5rem;">
-        <button class="btn-primary" style="width: 100%;" onclick="openSponsorModal('General Sponsorship Inquiry')">
-          <i class="fa-solid fa-handshake"></i> Inquire Sponsorship
-        </button>
-      </li>
-    </ul>
-  </div>
-
   <main>
     <!-- Hero Section -->
-    <section class="hero-section" id="hero">
+    <section class="section hero" id="hero">
       <div class="container">
         <div class="hero-grid">
-          <div class="hero-content">
-            <div class="host-tag">
-              <i class="fa-solid fa-graduation-cap"></i> Tripura Institute of Technology, Narsingarh
+          <div>
+            <div class="badge-tag">
+              <i class="fa-solid fa-building-columns"></i> Tripura Institute of Technology, Narsingarh
             </div>
-            <h1 class="hero-headline">
+            <h1 class="hero-title">
               UTKARSH 5.0
-              <span class="title-span">Inter-College Drone & Robotics Techfest</span>
+              <span class="gradient-text">Inter-College Drone & Robotics Techfest</span>
             </h1>
             <p class="hero-desc">
-              Tripura's most prestigious annual tech carnival uniting <strong>1,500+ engineering & polytechnic students</strong> across the state. We are actively inviting forward-thinking corporate leaders and tech brands to claim premier sponsorship slots.
+              Tripura’s premier annual techno-cultural extravaganza uniting <strong>1,500+ students from all technical colleges</strong> in our state. We invite industry leaders to partner with us and access Tripura’s most energetic youth talent.
             </p>
 
-            <div class="hero-cta-row">
-              <a href="#slots" class="btn-primary">
+            <div class="hero-btn-row">
+              <a href="#slots" class="btn btn-primary">
                 <i class="fa-solid fa-trophy"></i> Explore Sponsorship Slots
               </a>
-              <button class="btn-secondary" onclick="downloadBrochure()">
+              <button class="btn btn-secondary" onclick="downloadBrochure()">
                 <i class="fa-solid fa-download"></i> Download Pitch Deck
               </button>
             </div>
 
-            <!-- Key Footfall & Impact Metric Banner -->
-            <div class="stats-banner">
+            <!-- Stats Banner -->
+            <div class="stats-row">
               <div class="stat-item">
-                <div class="stat-num">1,500<span>+</span></div>
-                <div class="stat-label">Expected Footfall</div>
+                <div class="stat-val">1,500+</div>
+                <div class="stat-lbl">Expected Footfall</div>
               </div>
               <div class="stat-item">
-                <div class="stat-num">50<span>+</span></div>
-                <div class="stat-label">Inter-College Teams</div>
+                <div class="stat-val">50+</div>
+                <div class="stat-lbl">College Teams</div>
               </div>
               <div class="stat-item">
-                <div class="stat-num">₹1.5<span>L+</span></div>
-                <div class="stat-label">Prize Pool</div>
+                <div class="stat-val">₹1.5L+</div>
+                <div class="stat-lbl">Prize Pool</div>
               </div>
               <div class="stat-item">
-                <div class="stat-num">15<span>+</span></div>
-                <div class="stat-label">Technical Colleges</div>
+                <div class="stat-val">9+</div>
+                <div class="stat-lbl">Technical Colleges</div>
               </div>
             </div>
           </div>
 
-          <!-- Hero Right: Live Deck & Countdown Card -->
-          <div class="hero-visual">
-            <div class="glass-deck-card">
-              <div class="deck-header">
+          <!-- Hero Right: Live Countdown Card -->
+          <div>
+            <div class="deck-card">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
                 <div>
-                  <h2 class="deck-title">Grand Arena Countdown</h2>
-                  <p class="deck-sub">TIT Agartala Central Grounds</p>
+                  <h3 style="font-size: 1.2rem; font-weight: 700;">Festival Countdown</h3>
+                  <p style="font-size: 0.85rem; color: var(--text-muted);">TIT Agartala Central Grounds</p>
                 </div>
-                <div class="live-pill">
-                  <span class="live-dot"></span> Slots Open
-                </div>
+                <span class="badge-tag" style="background: rgba(16, 185, 129, 0.12); color: #047857;">
+                  <i class="fa-solid fa-circle" style="font-size: 0.5rem;"></i> Slots Open
+                </span>
               </div>
 
               <!-- Countdown Timer -->
-              <div class="countdown-box">
-                <div class="countdown-label">Days Remaining Until Inauguration</div>
-                <div class="countdown-grid">
-                  <div class="time-unit">
-                    <div class="time-val" id="days">28</div>
-                    <div class="time-name">Days</div>
-                  </div>
-                  <div class="time-unit">
-                    <div class="time-val" id="hours">14</div>
-                    <div class="time-name">Hours</div>
-                  </div>
-                  <div class="time-unit">
-                    <div class="time-val" id="minutes">45</div>
-                    <div class="time-name">Mins</div>
-                  </div>
-                  <div class="time-unit">
-                    <div class="time-val" id="seconds">10</div>
-                    <div class="time-name">Secs</div>
-                  </div>
+              <div class="timer-grid">
+                <div class="time-card">
+                  <div class="time-num" id="days">28</div>
+                  <div class="time-lbl">Days</div>
+                </div>
+                <div class="time-card">
+                  <div class="time-num" id="hours">14</div>
+                  <div class="time-lbl">Hours</div>
+                </div>
+                <div class="time-card">
+                  <div class="time-num" id="minutes">45</div>
+                  <div class="time-lbl">Mins</div>
+                </div>
+                <div class="time-card">
+                  <div class="time-num" id="seconds">10</div>
+                  <div class="time-lbl">Secs</div>
                 </div>
               </div>
 
-              <ul class="perks-mini-list">
-                <li>
-                  <i class="fa-solid fa-bullhorn"></i>
-                  <span><strong>1500+ direct student audience</strong> from technical colleges of Tripura</span>
-                </li>
-                <li>
-                  <i class="fa-solid fa-vr-cardboard"></i>
-                  <span>Live FPV high-speed drone racing arena & 30kg combat robowars</span>
-                </li>
-                <li>
-                  <i class="fa-solid fa-award"></i>
-                  <span>Last year's Title Sponsor: <strong>Triumph Motorcycles</strong></span>
-                </li>
+              <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1.5rem; font-size: 0.875rem; color: var(--text-sub);">
+                <li><i class="fa-solid fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> <strong>1,500+ direct student attendees</strong> across Tripura</li>
+                <li><i class="fa-solid fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Live FPV drone racing & 30kg combat robowars</li>
+                <li><i class="fa-solid fa-check" style="color: var(--primary); margin-right: 0.5rem;"></i> Utkarsh 4.0 Title Sponsor: <strong>Triumph Motorcycles</strong></li>
               </ul>
 
-              <button class="btn-gold" style="width: 100%; justify-content: center;" onclick="openSponsorModal('Title / Co-Sponsorship Priority')">
+              <button class="btn btn-gold" style="width: 100%;" onclick="openSponsorModal('Title / Co-Sponsor Priority')">
                 <i class="fa-solid fa-bolt"></i> Inquire for Title Sponsorship
               </button>
             </div>
@@ -186,1043 +150,416 @@
       </div>
     </section>
 
-    <!-- Welcome & About Section -->
+    <!-- Welcome & Why Sponsor Section -->
     <section class="section section-alt" id="about">
       <div class="container">
-        <div class="section-title-wrap">
-          <div class="badge-pill primary"><i class="fa-solid fa-graduation-cap"></i> Premier State Institute</div>
+        <div class="section-header">
+          <div class="badge-tag"><i class="fa-solid fa-graduation-cap"></i> Premier State Institute</div>
           <h2 class="section-title">Welcome to <span class="gradient-text">Utkarsh 5.0</span> at Tripura Institute of Technology</h2>
-          <p class="section-subtitle" style="font-size: 1.15rem; font-weight: 500; color: var(--text-primary); margin-top: 1rem;">
+          <p class="section-desc" style="color: var(--text-main); font-weight: 500; margin-top: 0.75rem;">
             As the first and only state-run government engineering institute in the state, <strong>Tripura Institute of Technology (TIT), Narsingarh</strong>, stands at the forefront of technical education and youth culture in the region. This year, we are thrilled to announce the return of our grand annual techno-cultural festival: <strong>Utkarsh 5.0</strong>.
           </p>
-          <p style="font-size: 1.05rem; color: var(--text-secondary); margin-top: 0.85rem; line-height: 1.7;">
+          <p style="font-size: 0.975rem; color: var(--text-muted); margin-top: 0.5rem;">
             We invite forward-thinking brands and organizations to partner with us as we bring together the brightest minds and the most energetic talents for a multi-day celebration of technology, art, and innovation.
           </p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.75rem;">
-          <div style="background: #fff; padding: 2rem; border-radius: var(--radius-xl); border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">
-            <div style="width: 50px; height: 50px; border-radius: 14px; background: rgba(2, 132, 199, 0.1); color: var(--brand-primary); display: flex; align-items: center; justify-content: center; font-size: 1.35rem; margin-bottom: 1.25rem;">
-              <i class="fa-solid fa-microchip"></i>
-            </div>
-            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem;">State-Run Engineering Hub</h3>
-            <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
-              TIT Narsingarh leads Tripura's technological innovation, fostering engineering excellence across disciplines for decades.
-            </p>
-          </div>
-
-          <div style="background: #fff; padding: 2rem; border-radius: var(--radius-xl); border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">
-            <div style="width: 50px; height: 50px; border-radius: 14px; background: rgba(245, 158, 11, 0.12); color: #b45309; display: flex; align-items: center; justify-content: center; font-size: 1.35rem; margin-bottom: 1.25rem;">
-              <i class="fa-solid fa-users-rays"></i>
-            </div>
-            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem;">Techno-Cultural Fusion</h3>
-            <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
-              A multi-day extravaganza bridging combat robotics, aerial drone racing, high-octane musical concerts, and stunt shows.
-            </p>
-          </div>
-
-          <div style="background: #fff; padding: 2rem; border-radius: var(--radius-xl); border: 1px solid var(--border-light); box-shadow: var(--shadow-sm);">
-            <div style="width: 50px; height: 50px; border-radius: 14px; background: rgba(124, 58, 237, 0.12); color: var(--brand-purple); display: flex; align-items: center; justify-content: center; font-size: 1.35rem; margin-bottom: 1.25rem;">
-              <i class="fa-solid fa-handshake"></i>
-            </div>
-            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 0.5rem;">Corporate Synergy</h3>
-            <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
-              Partnering with global titans (like Triumph Motorcycles in Utkarsh 4.0) and regional market leaders for unprecedented brand recall.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Why Sponsor Utkarsh 5.0? -->
-    <section class="section" id="why-sponsor">
-      <div class="container">
-        <div class="section-title-wrap">
-          <div class="badge-pill gold"><i class="fa-solid fa-star"></i> High-Impact Partnership</div>
-          <h2 class="section-title">Why Sponsor <span class="gradient-text">Utkarsh 5.0?</span></h2>
-          <p class="section-subtitle">
-            TIT is a melting pot of talent. Our campus draws a highly diverse and engaged demographic of students from every major and minor city, town, and district across Tripura.
-          </p>
-        </div>
-
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 3.5rem;">
-          <div class="impact-card" style="border-left: 5px solid var(--brand-primary);">
-            <div class="impact-icon-box blue">
+        <!-- Why Sponsor Pillars -->
+        <div class="pillar-grid" id="why-sponsor">
+          <div class="pillar-card" style="border-left: 4px solid var(--primary);">
+            <div class="icon-box">
               <i class="fa-solid fa-map-location-dot"></i>
             </div>
-            <h3 class="impact-title" style="font-size: 1.4rem;">Unmatched Statewide Reach</h3>
-            <p class="impact-desc" style="font-size: 1rem;">
-              TIT is a melting pot of talent. Our campus draws a highly diverse and engaged demographic of students from every major and minor city, town, and district across Tripura. Partnering with us guarantees your brand <strong>direct, meaningful exposure to the state's most dynamic youth market</strong> of 1,500+ attendees.
+            <h3>Unmatched Statewide Reach</h3>
+            <p>
+              TIT is a melting pot of talent. Our campus draws a highly diverse and engaged demographic of students from every major and minor city, town, and district across Tripura. Partnering with us guarantees your brand direct, meaningful exposure to the state's most dynamic youth market.
             </p>
           </div>
 
-          <div class="impact-card" style="border-left: 5px solid var(--brand-amber);">
-            <div class="impact-icon-box gold">
-              <i class="fa-solid fa-trophy"></i>
+          <div class="pillar-card" style="border-left: 4px solid var(--gold);">
+            <div class="icon-box gold">
+              <i class="fa-solid fa-award"></i>
             </div>
-            <h3 class="impact-title" style="font-size: 1.4rem;">A Legacy of Excellence</h3>
-            <p class="impact-desc" style="font-size: 1rem;">
+            <h3>A Legacy of Excellence</h3>
+            <p>
               Utkarsh has consistently set the benchmark for college festivals in the region. Building on the monumental success of our previous editions—which were proudly supported by industry giants like <strong>Triumph</strong>—Utkarsh 5.0 is scaling up to be our most spectacular event yet.
             </p>
           </div>
         </div>
 
-        <!-- Footfall Impact Highlights -->
-        <div class="impact-grid" style="margin-bottom: 3rem;">
-          <div class="impact-card">
-            <div class="impact-icon-box blue">
-              <i class="fa-solid fa-users-viewfinder"></i>
-            </div>
-            <h3 class="impact-title">1,500+ Guaranteed Footfall</h3>
-            <p class="impact-desc">
-              Direct face-to-face interaction with motivated youth, early tech adopters, future engineers, developers, and makers across Tripura.
-            </p>
-          </div>
-
-          <div class="impact-card">
-            <div class="impact-icon-box gold">
-              <i class="fa-solid fa-store"></i>
-            </div>
-            <h3 class="impact-title">Prime Stall & Demo Zones</h3>
-            <p class="impact-desc">
-              High-traffic experiential booth spaces right in front of the Central Drone Arena for product testing, live demos, and engagement.
-            </p>
-          </div>
-
-          <div class="impact-card">
-            <div class="impact-icon-box purple">
-              <i class="fa-solid fa-user-graduate"></i>
-            </div>
-            <h3 class="impact-title">Talent Scouting & Resume Drop</h3>
-            <p class="impact-desc">
-              Exclusive sponsor rights to collect student resumes, organize campus hackathons, and conduct pre-placement recruitment interviews.
-            </p>
-          </div>
-        </div>
-
         <!-- Technical Colleges In Tripura Network -->
-        <div class="colleges-network">
-          <div class="network-header">
-            <div>
-              <div class="network-title"><i class="fa-solid fa-building-columns" style="color: var(--brand-primary); margin-right: 0.5rem;"></i> Participating Institutions Across Tripura</div>
-              <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.2rem;">Students and delegations attending Utkarsh 5.0 from all regional technical colleges:</p>
-            </div>
-            <span class="badge-pill emerald"><i class="fa-solid fa-check-circle"></i> 100% State Coverage</span>
+        <div class="colleges-box">
+          <div class="colleges-title">
+            <i class="fa-solid fa-building-columns" style="color: var(--primary); margin-right: 0.5rem;"></i>
+            Participating Technical Colleges Across Tripura (1,500+ Students)
           </div>
-
-          <div class="colleges-chips">
-            <div class="college-chip"><i class="fa-solid fa-circle-check"></i> Tripura Institute of Technology (TIT) - Host</div>
-            <div class="college-chip"><i class="fa-solid fa-circle-check"></i> National Institute of Technology Agartala (NITA)</div>
-            <div class="college-chip"><i class="fa-solid fa-circle-check"></i> ICFAI University Tripura (Faculty of Science & Tech)</div>
-            <div class="college-chip"><i class="fa-solid fa-circle-check"></i> Techno College of Engineering Agartala (TCEA)</div>
-            <div class="college-chip"><i class="fa-solid fa-circle-check"></i> Women's Polytechnic, Hapania</div>
-            <div class="college-chip"><i class="fa-solid fa-circle-check"></i> Tripura University (Dept. of IT & Computer Science)</div>
-            <div class="college-chip"><i class="fa-solid fa-circle-check"></i> Gomati District Polytechnic</div>
-            <div class="college-chip"><i class="fa-solid fa-circle-check"></i> Dhalai District Polytechnic, Ambassa</div>
-            <div class="college-chip"><i class="fa-solid fa-circle-check"></i> North Tripura District Polytechnic, Dharmanagar</div>
+          <div class="chips-row">
+            <span class="chip"><i class="fa-solid fa-check" style="color: var(--emerald);"></i> Tripura Institute of Technology (TIT) - Host</span>
+            <span class="chip"><i class="fa-solid fa-check" style="color: var(--emerald);"></i> National Institute of Technology Agartala (NITA)</span>
+            <span class="chip"><i class="fa-solid fa-check" style="color: var(--emerald);"></i> ICFAI University Tripura</span>
+            <span class="chip"><i class="fa-solid fa-check" style="color: var(--emerald);"></i> Techno College of Engineering Agartala (TCEA)</span>
+            <span class="chip"><i class="fa-solid fa-check" style="color: var(--emerald);"></i> Women's Polytechnic, Hapania</span>
+            <span class="chip"><i class="fa-solid fa-check" style="color: var(--emerald);"></i> Tripura University (IT Dept.)</span>
+            <span class="chip"><i class="fa-solid fa-check" style="color: var(--emerald);"></i> Gomati, Dhalai & North Tripura Polytechnics</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Centerstage Highlights Section -->
-    <section class="section section-alt" id="centerstage">
+    <!-- Centerstage Highlights -->
+    <section class="section" id="centerstage">
       <div class="container">
-        <div class="section-title-wrap">
-          <div class="badge-pill primary"><i class="fa-solid fa-sparkles"></i> The Big Stage</div>
+        <div class="section-header">
+          <div class="badge-tag"><i class="fa-solid fa-star"></i> Flagship Events</div>
           <h2 class="section-title">Centerstage <span class="gradient-text">Highlights</span></h2>
-          <p class="section-subtitle">
-            Utkarsh 5.0 bridges the gap between high-level technical engineering and vibrant cultural expression. This year's flagship events include:
+          <p class="section-desc">
+            Utkarsh 5.0 bridges the gap between high-level technical engineering and vibrant cultural expression.
           </p>
         </div>
 
-        <div class="centerstage-grid">
-          
-          <!-- Highlight 1: Drone & Robotics -->
-          <div class="centerstage-card featured-span">
-            <div class="centerstage-img-wrap" style="height: 240px;">
-              <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=1000&q=80" alt="Drone and Robotics Arena">
-            </div>
-            <div class="centerstage-body">
-              <div class="centerstage-tag"><i class="fa-solid fa-robot"></i> Flagship Technical Clash</div>
-              <h3 class="centerstage-title">Inter-College Drone & Robotics Competition</h3>
-              <p class="centerstage-desc">
-                A high-stakes arena where the region's top engineering minds showcase cutting-edge hardware, aerial navigation, and combat robotics inside glowing obstacle hoops and shatterproof polycarbonate combat cages.
-              </p>
+        <div class="hl-grid">
+          <div class="hl-card span-2">
+            <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=800&q=80" alt="Drone and Robotics" class="hl-img">
+            <div class="hl-body">
+              <span class="badge-tag">Technical Arena</span>
+              <h3>Inter-College Drone & Robotics Competition</h3>
+              <p>A high-stakes arena where the region's top engineering minds showcase cutting-edge hardware, aerial navigation, and combat robotics.</p>
             </div>
           </div>
 
-          <!-- Highlight 2: Flash Mobs -->
-          <div class="centerstage-card">
-            <div class="centerstage-img-wrap">
-              <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=800&q=80" alt="Flash Mob Performers">
-            </div>
-            <div class="centerstage-body">
-              <div class="centerstage-tag"><i class="fa-solid fa-fire"></i> Campus Sensation</div>
-              <h3 class="centerstage-title">High-Energy Flash Mobs</h3>
-              <p class="centerstage-desc">
-                Spontaneous, highly choreographed performances guaranteed to draw massive, engaged crowds across campus plazas and central amphitheaters.
-              </p>
+          <div class="hl-card">
+            <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=600&q=80" alt="Flash Mobs" class="hl-img">
+            <div class="hl-body">
+              <span class="badge-tag">Crowd Sensation</span>
+              <h3>High-Energy Flash Mobs</h3>
+              <p>Spontaneous, highly choreographed performances guaranteed to draw massive, engaged crowds.</p>
             </div>
           </div>
 
-          <!-- Highlight 3: Extreme Cyclist Shows -->
-          <div class="centerstage-card">
-            <div class="centerstage-img-wrap">
-              <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80" alt="Extreme Cyclist Stunts">
-            </div>
-            <div class="centerstage-body">
-              <div class="centerstage-tag"><i class="fa-solid fa-bicycle"></i> Pure Adrenaline</div>
-              <h3 class="centerstage-title">Extreme Cyclist Shows</h3>
-              <p class="centerstage-desc">
-                Adrenaline-pumping stunt performances showcasing incredible athletic skill, high jumps, balance wizardry, and BMX thrills on custom ramps.
-              </p>
+          <div class="hl-card">
+            <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80" alt="Extreme Cyclist" class="hl-img">
+            <div class="hl-body">
+              <span class="badge-tag">Adrenaline Stunts</span>
+              <h3>Extreme Cyclist Shows</h3>
+              <p>Adrenaline-pumping stunt performances showcasing incredible athletic skill.</p>
             </div>
           </div>
 
-          <!-- Highlight 4: Live Band Concert -->
-          <div class="centerstage-card">
-            <div class="centerstage-img-wrap">
-              <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&q=80" alt="Live Band Concert">
-            </div>
-            <div class="centerstage-body">
-              <div class="centerstage-tag"><i class="fa-solid fa-guitar"></i> Musical Headliner</div>
-              <h3 class="centerstage-title">Live Band Performances</h3>
-              <p class="centerstage-desc">
-                Headlining musical acts that will transform the campus into a sprawling concert venue with 1,500+ roaring voices, laser shows, and electric energy.
-              </p>
+          <div class="hl-card">
+            <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=600&q=80" alt="Live Band" class="hl-img">
+            <div class="hl-body">
+              <span class="badge-tag">Concert Venue</span>
+              <h3>Live Band Performances</h3>
+              <p>Headlining musical acts that will transform the campus into a sprawling concert venue.</p>
             </div>
           </div>
 
-          <!-- Highlight 5: Open Mic Sessions -->
-          <div class="centerstage-card">
-            <div class="centerstage-img-wrap">
-              <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=800&q=80" alt="Open Mic Session">
-            </div>
-            <div class="centerstage-body">
-              <div class="centerstage-tag"><i class="fa-solid fa-microphone-lines"></i> Creative Expression</div>
-              <h3 class="centerstage-title">Open Mic Sessions</h3>
-              <p class="centerstage-desc">
-                A creative platform amplifying the voices, poetry, storytelling, and acoustic musical talents of our diverse student body from across Tripura.
-              </p>
+          <div class="hl-card">
+            <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=600&q=80" alt="Open Mic" class="hl-img">
+            <div class="hl-body">
+              <span class="badge-tag">Creative Platform</span>
+              <h3>Open Mic Sessions</h3>
+              <p>A creative platform amplifying the voices, poetry, and musical talents of our diverse student body.</p>
             </div>
           </div>
-
         </div>
       </div>
     </section>
 
-    <!-- Action in Motion: 4 Featured Festival Videos -->
-    <section class="section" id="festival-videos">
+    <!-- 4 Featured Festival Videos -->
+    <section class="section section-alt" id="videos">
       <div class="container">
-        <div class="section-title-wrap">
-          <div class="badge-pill primary"><i class="fa-solid fa-video"></i> Visual Spectacle</div>
-          <h2 class="section-title">Utkarsh in Motion — <span class="gradient-text">4 Featured Festival Videos</span></h2>
-          <p class="section-subtitle">
-            Experience the pulse, the sparks, the beats, and the roar of the crowd. Click on any video to stream the full high-energy preview.
+        <div class="section-header">
+          <div class="badge-tag"><i class="fa-solid fa-video"></i> Event Action in Motion</div>
+          <h2 class="section-title">4 Featured <span class="gradient-text">Festival Videos</span></h2>
+          <p class="section-desc">
+            Watch the thrills, the mechanical clashing, the stunts, and the massive college concerts.
           </p>
         </div>
 
         <div class="videos-grid">
-          
-          <!-- Video 1: Drone Obstacle Racing & Aerial FPV -->
-          <div class="video-card">
-            <div class="video-container">
-              <span class="video-badge-overlay"><i class="fa-solid fa-play"></i> Video 1 • Drone Racing</span>
-              <video preload="metadata" poster="https://images.unsplash.com/photo-1527977966376-1c8408f9f108?auto=format&fit=crop&w=900&q=80">
+          <!-- Video 1 -->
+          <div class="video-box">
+            <div class="video-screen">
+              <span class="play-badge"><i class="fa-solid fa-play"></i> Video 1 • Drone Racing</span>
+              <video preload="metadata" poster="https://images.unsplash.com/photo-1527977966376-1c8408f9f108?auto=format&fit=crop&w=700&q=80">
                 <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
-                Your browser does not support HTML5 video.
               </video>
-              <button class="video-play-btn" onclick="openVideoPlayer('https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4', 'Inter-College Drone Obstacle Racing Championship')">
-                <i class="fa-solid fa-play"></i>
-              </button>
             </div>
             <div class="video-body">
-              <h3 class="video-title">Inter-College Drone Obstacle Racing</h3>
-              <p class="video-desc">
-                High-speed FPV quadcopters weaving through neon obstacle hoops, tight hairpins, and elevation gates at blinding speeds.
-              </p>
-              <div class="video-footer">
-                <span class="video-tag"><i class="fa-solid fa-bolt"></i> 70+ km/h Aerial Action</span>
-                <button class="btn-secondary btn-sm" onclick="openVideoPlayer('https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4', 'Inter-College Drone Obstacle Racing Championship')">
-                  <i class="fa-solid fa-expand"></i> Watch Video
-                </button>
-              </div>
+              <h3>Inter-College Drone Obstacle Racing</h3>
+              <p>High-speed FPV quadcopters racing through LED obstacle gates at 70+ km/h.</p>
+              <button class="btn btn-secondary" style="width: 100%; font-size: 0.85rem; padding: 0.55rem;" onclick="openVideoPlayer('https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4', 'Inter-College Drone Obstacle Racing')">
+                <i class="fa-solid fa-play"></i> Watch Video
+              </button>
             </div>
           </div>
 
-          <!-- Video 2: Combat RoboWars in Polycarbonate Cage -->
-          <div class="video-card">
-            <div class="video-container">
-              <span class="video-badge-overlay"><i class="fa-solid fa-play"></i> Video 2 • RoboWars Arena</span>
-              <video preload="metadata" poster="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=900&q=80">
+          <!-- Video 2 -->
+          <div class="video-box">
+            <div class="video-screen">
+              <span class="play-badge"><i class="fa-solid fa-play"></i> Video 2 • RoboWars</span>
+              <video preload="metadata" poster="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=700&q=80">
                 <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4" type="video/mp4">
-                Your browser does not support HTML5 video.
               </video>
-              <button class="video-play-btn" onclick="openVideoPlayer('https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4', 'Armored RoboWars 30kg Combat Clash')">
-                <i class="fa-solid fa-play"></i>
-              </button>
             </div>
             <div class="video-body">
-              <h3 class="video-title">Armored RoboWars & Sparking Clashes</h3>
-              <p class="video-desc">
-                Heavyweight and featherweight combat robots clashing inside the reinforced safety arena with spinning steel blades and pneumatic flips.
-              </p>
-              <div class="video-footer">
-                <span class="video-tag"><i class="fa-solid fa-fire"></i> High Voltage Robotic Combat</span>
-                <button class="btn-secondary btn-sm" onclick="openVideoPlayer('https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4', 'Armored RoboWars 30kg Combat Clash')">
-                  <i class="fa-solid fa-expand"></i> Watch Video
-                </button>
-              </div>
+              <h3>Armored RoboWars & Combat Clashes</h3>
+              <p>30kg battle robots clashing inside the enclosed safety cage with spinning steel blades.</p>
+              <button class="btn btn-secondary" style="width: 100%; font-size: 0.85rem; padding: 0.55rem;" onclick="openVideoPlayer('https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4', 'Armored RoboWars Combat')">
+                <i class="fa-solid fa-play"></i> Watch Video
+              </button>
             </div>
           </div>
 
-          <!-- Video 3: Extreme Cyclist Stunt Show -->
-          <div class="video-card">
-            <div class="video-container">
-              <span class="video-badge-overlay"><i class="fa-solid fa-play"></i> Video 3 • Stunt Showcase</span>
-              <video preload="metadata" poster="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=900&q=80">
+          <!-- Video 3 -->
+          <div class="video-box">
+            <div class="video-screen">
+              <span class="play-badge"><i class="fa-solid fa-play"></i> Video 3 • Cyclist Stunts</span>
+              <video preload="metadata" poster="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=700&q=80">
                 <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4" type="video/mp4">
-                Your browser does not support HTML5 video.
               </video>
-              <button class="video-play-btn" onclick="openVideoPlayer('https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4', 'Extreme Cyclist BMX Stunt Performance')">
-                <i class="fa-solid fa-play"></i>
-              </button>
             </div>
             <div class="video-body">
-              <h3 class="video-title">Extreme Cyclist Stunt Performances</h3>
-              <p class="video-desc">
-                Adrenaline-pumping stunt performances showcasing incredible athletic skill, tail-whips, 360-degree rotations, and crowd-stirring feats.
-              </p>
-              <div class="video-footer">
-                <span class="video-tag"><i class="fa-solid fa-person-biking"></i> Adrenaline & Athletic Mastery</span>
-                <button class="btn-secondary btn-sm" onclick="openVideoPlayer('https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4', 'Extreme Cyclist BMX Stunt Performance')">
-                  <i class="fa-solid fa-expand"></i> Watch Video
-                </button>
-              </div>
+              <h3>Extreme Cyclist Stunt Show</h3>
+              <p>Adrenaline-pumping jumps, tail-whips, and balance mastery on custom campus ramps.</p>
+              <button class="btn btn-secondary" style="width: 100%; font-size: 0.85rem; padding: 0.55rem;" onclick="openVideoPlayer('https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4', 'Extreme Cyclist Stunt Show')">
+                <i class="fa-solid fa-play"></i> Watch Video
+              </button>
             </div>
           </div>
 
-          <!-- Video 4: Live Band Concert & High-Energy Flash Mobs -->
-          <div class="video-card">
-            <div class="video-container">
-              <span class="video-badge-overlay"><i class="fa-solid fa-play"></i> Video 4 • Concert & Flash Mob</span>
-              <video preload="metadata" poster="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=900&q=80">
+          <!-- Video 4 -->
+          <div class="video-box">
+            <div class="video-screen">
+              <span class="play-badge"><i class="fa-solid fa-play"></i> Video 4 • Concert & Flash Mob</span>
+              <video preload="metadata" poster="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=700&q=80">
                 <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyBlazes.mp4" type="video/mp4">
-                Your browser does not support HTML5 video.
               </video>
-              <button class="video-play-btn" onclick="openVideoPlayer('https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyBlazes.mp4', 'Headlining Live Band & Campus Flash Mob')">
-                <i class="fa-solid fa-play"></i>
-              </button>
             </div>
             <div class="video-body">
-              <h3 class="video-title">Live Band Concert & High-Energy Flash Mobs</h3>
-              <p class="video-desc">
-                Headlining musical acts and spontaneous choreographed dance flash mobs transforming TIT campus into a massive celebration for 1,500+ fans.
-              </p>
-              <div class="video-footer">
-                <span class="video-tag"><i class="fa-solid fa-music"></i> 1,500+ Electric Audience</span>
-                <button class="btn-secondary btn-sm" onclick="openVideoPlayer('https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyBlazes.mp4', 'Headlining Live Band & Campus Flash Mob')">
-                  <i class="fa-solid fa-expand"></i> Watch Video
-                </button>
-              </div>
+              <h3>Live Band Concert & Flash Mob</h3>
+              <p>Campus concerts rocking 1,500+ cheering students and spontaneous dance performances.</p>
+              <button class="btn btn-secondary" style="width: 100%; font-size: 0.85rem; padding: 0.55rem;" onclick="openVideoPlayer('https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyBlazes.mp4', 'Live Band Concert & Flash Mob')">
+                <i class="fa-solid fa-play"></i> Watch Video
+              </button>
             </div>
-          </div>
-
-        </div>
-
-        <!-- Video Upload / Replacement Helper for Organizers -->
-        <div class="organizer-uploader-box" style="margin-top: 2.5rem;">
-          <div class="uploader-icon"><i class="fa-solid fa-film"></i></div>
-          <h3 class="uploader-title">Have Event Video Clips from Utkarsh?</h3>
-          <p class="uploader-desc">Select an MP4/WebM video file from your computer to preview it directly inside the video players above.</p>
-          <input type="file" id="localVideoInput" accept="video/*" style="display: none;">
-          <button class="btn-secondary btn-sm" onclick="document.getElementById('localVideoInput').click()">
-            <i class="fa-solid fa-video"></i> Load Local Video Clip
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Let’s Build Something Grand Together (Callout) -->
-    <section class="container">
-      <div class="grand-callout-box">
-        <div class="grand-callout-grid">
-          <div>
-            <div class="badge-pill gold" style="margin-bottom: 0.75rem;"><i class="fa-solid fa-handshake-angle"></i> Sponsor Partnership Call</div>
-            <h2 class="grand-callout-title">Let’s Build Something Grand Together</h2>
-            <p class="grand-callout-desc">
-              By sponsoring Utkarsh 5.0, you aren't just putting your logo on a banner—you are actively investing in the next generation of engineers, creators, and leaders in Tripura. We offer highly customizable sponsorship tiers to ensure your brand gets maximum visibility, on-ground engagement, and digital reach.
-            </p>
-            <div style="margin-top: 1.5rem; display: flex; align-items: center; gap: 0.75rem; font-weight: 700; color: #fef08a;">
-              <i class="fa-solid fa-location-dot"></i> Join us at TIT Narsingarh. Let’s make Utkarsh 5.0 unforgettable!
-            </div>
-          </div>
-          <div style="text-align: center;">
-            <a href="#slots" class="btn-gold" style="font-size: 1.05rem; padding: 1rem 2rem; display: inline-flex;">
-              <i class="fa-solid fa-trophy"></i> View Sponsorship Slots
-            </a>
-            <p style="font-size: 0.8rem; color: #bfdbfe; margin-top: 0.75rem;">1,500+ Expected Footfall • Limited Slots</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SPONSORSHIP SLOTS SECTION -->
-    <section class="section section-alt" id="slots">
+    <!-- Sponsorship Slots Section -->
+    <section class="section" id="slots">
       <div class="container">
-        <div class="section-title-wrap">
-          <div class="badge-pill primary"><i class="fa-solid fa-layer-group"></i> Tailored Partnership Opportunities</div>
-          <h2 class="section-title">Exclusive <span class="gradient-text">Sponsorship Slots</span></h2>
-          <p class="section-subtitle">
-            Secure your slot early. Every tier is structured with distinct deliverables, physical branding spaces, and direct digital exposure to our 1,500+ attendees.
+        <div class="section-header">
+          <div class="badge-tag"><i class="fa-solid fa-handshake"></i> Corporate Opportunities</div>
+          <h2 class="section-title">Transparent <span class="gradient-text">Sponsorship Slots</span></h2>
+          <p class="section-desc">
+            Choose your slot early. Direct access to 1,500+ engineering minds and widespread brand exposure.
           </p>
         </div>
 
-        <div class="sponsorship-intro-bar">
-          <div class="intro-bar-left">
-            <div class="intro-icon"><i class="fa-solid fa-shield-halved"></i></div>
-            <div class="intro-bar-text">
-              <h4>Customized Corporate & Startup Packages Available</h4>
-              <p>Looking for a bespoke category (e.g. Official Energy Drink, Tech Equipment, or Wi-Fi Partner)? We customize slot deliverables to your objectives.</p>
-            </div>
-          </div>
-          <button class="btn-primary btn-sm" onclick="openSponsorModal('Custom Brand Partnership')">
-            <i class="fa-solid fa-sliders"></i> Request Custom Slot
-          </button>
-        </div>
-
-        <!-- Tiered Slots Grid -->
         <div class="slots-grid">
-          
-          <!-- Slot 1: Title Sponsor -->
+          <!-- Slot 1: Title -->
           <div class="slot-card featured">
-            <div class="slot-ribbon">Most Prestigious</div>
-            <div class="slot-header">
-              <div class="slot-availability rare">
-                <i class="fa-solid fa-fire"></i> Only 1 Exclusive Slot
-              </div>
-              <h3 class="slot-tier-name">Title Sponsor</h3>
-              <p class="slot-tier-desc">Supreme event naming rights: "Utkarsh 5.0 presented by [Your Brand]". (Last year proudly held by <strong>Triumph</strong>).</p>
-            </div>
-
-            <div class="slot-price-row">
-              <div class="slot-price"><span class="slot-price-currency">₹</span>1,00,000</div>
-              <div class="slot-price-sub">Exclusive Top-Tier Sponsorship Slot</div>
-            </div>
-
-            <ul class="slot-features-list">
-              <li><i class="fa-solid fa-check"></i> <strong>Event Co-Naming:</strong> Official branding across all press, hoardings & social media</li>
-              <li><i class="fa-solid fa-check"></i> <strong>20x20 ft Prime Experiential Stall</strong> at main quadrangle</li>
-              <li><i class="fa-solid fa-check"></i> <strong>Keynote & Presentation:</strong> 20 min address at Grand Inaugural Ceremony</li>
-              <li><i class="fa-solid fa-check"></i> <strong>Prominent Logo on all 1,500+ delegate lanyards</strong>, certificates & volunteer tees</li>
-              <li><i class="fa-solid fa-check"></i> <strong>Drone Arena & Robo Cage:</strong> 360-degree perimeter arena branding</li>
-              <li><i class="fa-solid fa-check"></i> Full access to student resume bank (1,500+ entries)</li>
-              <li><i class="fa-solid fa-check"></i> Trophy & check co-presentation on main stage</li>
+            <div class="slot-ribbon">Top Tier</div>
+            <h3 class="slot-name">Title Sponsor</h3>
+            <div class="slot-avail"><i class="fa-solid fa-fire"></i> Only 1 Exclusive Slot</div>
+            <div class="slot-price">₹1,00,000</div>
+            <ul class="slot-list">
+              <li><i class="fa-solid fa-check"></i> <strong>Event Co-Naming:</strong> "Utkarsh 5.0 presented by [Brand]"</li>
+              <li><i class="fa-solid fa-check"></i> <strong>20x20 ft Prime Quad Stall</strong> at campus center</li>
+              <li><i class="fa-solid fa-check"></i> <strong>20-min Keynote Address</strong> at inauguration</li>
+              <li><i class="fa-solid fa-check"></i> Logo on 1,500+ student passes, t-shirts & certificates</li>
+              <li><i class="fa-solid fa-check"></i> Full access to 1,500+ student resume database</li>
             </ul>
-
-            <button class="btn-gold slot-cta-btn" onclick="openSponsorModal('Title Sponsor (₹1,00,000)')">
-              <i class="fa-solid fa-gem"></i> Reserve Title Slot
+            <button class="btn btn-gold" onclick="openSponsorModal('Title Sponsor (₹1,00,000)')">
+              Reserve Title Slot
             </button>
           </div>
 
-          <!-- Slot 2: Powered By / Co-Sponsor -->
+          <!-- Slot 2: Powered By -->
           <div class="slot-card">
-            <div class="slot-header">
-              <div class="slot-availability available">
-                <i class="fa-solid fa-circle-check"></i> 2 Slots Available
-              </div>
-              <h3 class="slot-tier-name">Powered By Partner</h3>
-              <p class="slot-tier-desc">High-prominence co-branding alongside all primary promotional materials and secondary stage tracks.</p>
-            </div>
-
-            <div class="slot-price-row">
-              <div class="slot-price"><span class="slot-price-currency">₹</span>60,000</div>
-              <div class="slot-price-sub">Co-Sponsorship Tier</div>
-            </div>
-
-            <ul class="slot-features-list">
-              <li><i class="fa-solid fa-check"></i> <strong>"Powered by [Brand]"</strong> subtitle on main entrance arch & posters</li>
-              <li><i class="fa-solid fa-check"></i> <strong>15x15 ft Exhibition Stall</strong> adjacent to Robowars combat arena</li>
-              <li><i class="fa-solid fa-check"></i> 10 min address during the robotics prize ceremony</li>
-              <li><i class="fa-solid fa-check"></i> Prominent logo on festival brochures and digital website banners</li>
-              <li><i class="fa-solid fa-check"></i> Product brochures inserted into 1,500 attendee welcome kits</li>
-              <li><i class="fa-solid fa-check"></i> Resume access for engineering student recruitment</li>
-              <li class="dimmed"><i class="fa-solid fa-minus"></i> 360-degree all-jersey chest logo</li>
+            <h3 class="slot-name">Powered By Partner</h3>
+            <div class="slot-avail"><i class="fa-solid fa-check-circle"></i> 2 Slots Available</div>
+            <div class="slot-price">₹60,000</div>
+            <ul class="slot-list">
+              <li><i class="fa-solid fa-check"></i> "Powered by [Brand]" across all entrance arches & posters</li>
+              <li><i class="fa-solid fa-check"></i> <strong>15x15 ft Exhibition Stall</strong> near combat arena</li>
+              <li><i class="fa-solid fa-check"></i> 10-min speech at robotics awards ceremony</li>
+              <li><i class="fa-solid fa-check"></i> Inserts in all 1,500 attendee welcome kits</li>
             </ul>
-
-            <button class="btn-primary slot-cta-btn" onclick="openSponsorModal('Powered By Partner (₹60,000)')">
-              <i class="fa-solid fa-bolt"></i> Reserve Powered-By Slot
+            <button class="btn btn-primary" onclick="openSponsorModal('Powered By Partner (₹60,000)')">
+              Reserve Powered-By Slot
             </button>
           </div>
 
-          <!-- Slot 3: Gold / Track Sponsor -->
+          <!-- Slot 3: Gold Track -->
           <div class="slot-card">
-            <div class="slot-header">
-              <div class="slot-availability available">
-                <i class="fa-solid fa-circle-check"></i> 4 Slots Available
-              </div>
-              <h3 class="slot-tier-name">Gold / Track Sponsor</h3>
-              <p class="slot-tier-desc">Exclusive naming rights to a major competition (e.g. Drone Racing Arena or Heavyweight RoboWars Cage).</p>
-            </div>
-
-            <div class="slot-price-row">
-              <div class="slot-price"><span class="slot-price-currency">₹</span>35,000</div>
-              <div class="slot-price-sub">Category Track Tier</div>
-            </div>
-
-            <ul class="slot-features-list">
-              <li><i class="fa-solid fa-check"></i> <strong>Competition Naming:</strong> "[Brand] Drone Racing Championship"</li>
-              <li><i class="fa-solid fa-check"></i> <strong>10x10 ft Brand Display Stall</strong> near the competition arena</li>
-              <li><i class="fa-solid fa-check"></i> Logo on certificates awarded to winners of that specific track</li>
-              <li><i class="fa-solid fa-check"></i> Social media spotlight post & reel reaching 15,000+ views</li>
-              <li><i class="fa-solid fa-check"></i> Standee banners at track entry and VIP seating area</li>
-              <li class="dimmed"><i class="fa-solid fa-minus"></i> Keynote speaking slot at inauguration</li>
-              <li class="dimmed"><i class="fa-solid fa-minus"></i> Jersey chest printing</li>
+            <h3 class="slot-name">Gold Track Sponsor</h3>
+            <div class="slot-avail"><i class="fa-solid fa-check-circle"></i> 4 Slots Available</div>
+            <div class="slot-price">₹35,000</div>
+            <ul class="slot-list">
+              <li><i class="fa-solid fa-check"></i> <strong>Arena Naming:</strong> "[Brand] Drone Racing Arena" or "RoboWars"</li>
+              <li><i class="fa-solid fa-check"></i> <strong>10x10 ft Brand Stall</strong> near arena</li>
+              <li><i class="fa-solid fa-check"></i> Dedicated social media spotlight reaching 10k+ students</li>
+              <li><i class="fa-solid fa-check"></i> Arena perimeter banner visibility</li>
             </ul>
-
-            <button class="btn-secondary slot-cta-btn" onclick="openSponsorModal('Gold / Track Sponsor (₹35,000)')">
-              <i class="fa-solid fa-tag"></i> Select Track Slot
+            <button class="btn btn-secondary" onclick="openSponsorModal('Gold Track Sponsor (₹35,000)')">
+              Select Track Slot
             </button>
           </div>
 
-          <!-- Slot 4: Silver Partner -->
+          <!-- Slot 4: Silver -->
           <div class="slot-card">
-            <div class="slot-header">
-              <div class="slot-availability available">
-                <i class="fa-solid fa-circle-check"></i> 6 Slots Available
-              </div>
-              <h3 class="slot-tier-name">Silver Sponsor</h3>
-              <p class="slot-tier-desc">Ideal for regional retail businesses, IT firms, and ed-tech companies wanting targeted footfall access.</p>
-            </div>
-
-            <div class="slot-price-row">
-              <div class="slot-price"><span class="slot-price-currency">₹</span>20,000</div>
-              <div class="slot-price-sub">Affordable Branding Slot</div>
-            </div>
-
-            <ul class="slot-features-list">
-              <li><i class="fa-solid fa-check"></i> <strong>Standard 8x8 ft Promotional Table / Stall</strong></li>
-              <li><i class="fa-solid fa-check"></i> Logo on general techfest banner & official website sponsors wall</li>
-              <li><i class="fa-solid fa-check"></i> Distribution of promotional flyers to attendees</li>
-              <li><i class="fa-solid fa-check"></i> Social media acknowledgment on TIT Utkarsh channels</li>
-              <li class="dimmed"><i class="fa-solid fa-minus"></i> Dedicated arena naming</li>
-              <li class="dimmed"><i class="fa-solid fa-minus"></i> Stage speaking slot</li>
-              <li class="dimmed"><i class="fa-solid fa-minus"></i> Resume database access</li>
+            <h3 class="slot-name">Silver Sponsor</h3>
+            <div class="slot-avail"><i class="fa-solid fa-check-circle"></i> 6 Slots Available</div>
+            <div class="slot-price">₹20,000</div>
+            <ul class="slot-list">
+              <li><i class="fa-solid fa-check"></i> <strong>8x8 ft Promotional Table/Stall</strong></li>
+              <li><i class="fa-solid fa-check"></i> Logo on festival banners & website</li>
+              <li><i class="fa-solid fa-check"></i> Distribution of company flyers to 1,500 delegates</li>
             </ul>
-
-            <button class="btn-secondary slot-cta-btn" onclick="openSponsorModal('Silver Sponsor (₹20,000)')">
-              <i class="fa-solid fa-ticket"></i> Select Silver Slot
+            <button class="btn btn-secondary" onclick="openSponsorModal('Silver Sponsor (₹20,000)')">
+              Select Silver Slot
             </button>
           </div>
 
-          <!-- Slot 5: Arena Combat & Drone Partner -->
-          <div class="slot-card">
-            <div class="slot-header">
-              <div class="slot-availability flexible">
-                <i class="fa-solid fa-robot"></i> 3 Slots Available
-              </div>
-              <h3 class="slot-tier-name">Hardware & Tooling Partner</h3>
-              <p class="slot-tier-desc">For electronics suppliers, 3D printing labs, drone parts vendors, or mechanical tools manufacturers.</p>
-            </div>
-
-            <div class="slot-price-row">
-              <div class="slot-price"><span class="slot-price-currency">₹</span>15,000 <span style="font-size: 0.9rem; font-weight: 500; color: var(--text-muted);">or In-Kind</span></div>
-              <div class="slot-price-sub">Equipment / Component Support</div>
-            </div>
-
-            <ul class="slot-features-list">
-              <li><i class="fa-solid fa-check"></i> Designated "Official Tech & Pit-Stop Partner"</li>
-              <li><i class="fa-solid fa-check"></i> Product demo space inside the Maker Pit where 50+ teams build</li>
-              <li><i class="fa-solid fa-check"></i> Logo on event website and technical handbook</li>
-              <li><i class="fa-solid fa-check"></i> Direct interaction with top drone and robotics fabricators</li>
-              <li class="dimmed"><i class="fa-solid fa-minus"></i> Main stage speaking time</li>
-              <li class="dimmed"><i class="fa-solid fa-minus"></i> Lanyard co-branding</li>
-            </ul>
-
-            <button class="btn-secondary slot-cta-btn" onclick="openSponsorModal('Hardware & Tooling Partner (₹15,000/In-Kind)')">
-              <i class="fa-solid fa-screwdriver-wrench"></i> Reserve Tooling Slot
+          <!-- Slot 5: Custom / In-Kind -->
+          <div class="slot-card span-2" style="grid-column: span 2;">
+            <h3 class="slot-name">Custom & In-Kind Support</h3>
+            <div class="slot-avail"><i class="fa-solid fa-hand-holding-hand"></i> Flexible Categories</div>
+            <div class="slot-price" style="font-size: 1.5rem;">₹15,000 / Product Support</div>
+            <p style="font-size: 0.9rem; color: var(--text-sub); margin-bottom: 1.25rem;">
+              For electronics vendors, beverage/snack partners, tooling/equipment labs, or media channels wanting customized visibility.
+            </p>
+            <button class="btn btn-secondary" onclick="openSponsorModal('Custom / In-Kind Partnership')">
+              Inquire Custom Slot
             </button>
           </div>
-
-          <!-- Slot 6: Youth / Beverage / Refreshment Partner -->
-          <div class="slot-card">
-            <div class="slot-header">
-              <div class="slot-availability flexible">
-                <i class="fa-solid fa-mug-hot"></i> 2 Slots Available
-              </div>
-              <h3 class="slot-tier-name">Refreshment & Media Partner</h3>
-              <p class="slot-tier-desc">For beverages, food chains, energy drinks, gaming brands, and regional media outlets.</p>
-            </div>
-
-            <div class="slot-price-row">
-              <div class="slot-price"><span class="slot-price-currency">₹</span>15,000 <span style="font-size: 0.9rem; font-weight: 500; color: var(--text-muted);">/ Custom</span></div>
-              <div class="slot-price-sub">Youth Hospitality Tier</div>
-            </div>
-
-            <ul class="slot-features-list">
-              <li><i class="fa-solid fa-check"></i> Exclusive beverage or food dispensing rights across all 3 festival days</li>
-              <li><i class="fa-solid fa-check"></i> High-traffic food-court kiosk space</li>
-              <li><i class="fa-solid fa-check"></i> Brand stickers on meal tokens & volunteer refreshments</li>
-              <li><i class="fa-solid fa-check"></i> Emcee announcements & beverage giveaway games</li>
-              <li class="dimmed"><i class="fa-solid fa-minus"></i> Technical arena naming</li>
-              <li class="dimmed"><i class="fa-solid fa-minus"></i> Keynote speech</li>
-            </ul>
-
-            <button class="btn-secondary slot-cta-btn" onclick="openSponsorModal('Refreshment & Media Partner')">
-              <i class="fa-solid fa-utensils"></i> Inquire Refreshment Slot
-            </button>
-          </div>
-
-        </div>
-
-        <!-- Deliverables Matrix Table -->
-        <div class="matrix-container">
-          <div class="matrix-header">
-            <h3><i class="fa-solid fa-table-cells" style="color: var(--brand-primary); margin-right: 0.5rem;"></i> Detailed Sponsorship Deliverables Matrix</h3>
-          </div>
-          <div class="matrix-table-wrap">
-            <table class="matrix-table">
-              <thead>
-                <tr>
-                  <th>Deliverables & Privileges</th>
-                  <th>Title (₹1L)</th>
-                  <th>Powered By (₹60k)</th>
-                  <th>Gold Track (₹35k)</th>
-                  <th>Silver (₹20k)</th>
-                  <th>In-Kind / Tech</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Fest Naming Rights ("Utkarsh 5.0 in assoc. with")</td>
-                  <td><span class="check-green"><i class="fa-solid fa-circle-check"></i> Exclusive</span></td>
-                  <td><span class="dash-gray">—</span></td>
-                  <td><span class="dash-gray">—</span></td>
-                  <td><span class="dash-gray">—</span></td>
-                  <td><span class="dash-gray">—</span></td>
-                </tr>
-                <tr>
-                  <td>On-Ground Exhibition Stall</td>
-                  <td>20 x 20 ft Prime Quad</td>
-                  <td>15 x 15 ft Central</td>
-                  <td>10 x 10 ft Arena</td>
-                  <td>8 x 8 ft Standard</td>
-                  <td>Demo Pit Space</td>
-                </tr>
-                <tr>
-                  <td>Main Stage Keynote & Presentation</td>
-                  <td>20 Minutes</td>
-                  <td>10 Minutes</td>
-                  <td>5 Minutes</td>
-                  <td><span class="dash-gray">—</span></td>
-                  <td><span class="dash-gray">—</span></td>
-                </tr>
-                <tr>
-                  <td>Logo on 1,500+ Student Passes & Lanyards</td>
-                  <td><span class="check-green"><i class="fa-solid fa-circle-check"></i> Prominent</span></td>
-                  <td><span class="check-green"><i class="fa-solid fa-circle-check"></i> Yes</span></td>
-                  <td><span class="dash-gray">—</span></td>
-                  <td><span class="dash-gray">—</span></td>
-                  <td><span class="dash-gray">—</span></td>
-                </tr>
-                <tr>
-                  <td>Perimeter Banners in Drone & Robo Arenas</td>
-                  <td>Unlimited 360°</td>
-                  <td>6 Banners</td>
-                  <td>4 Banners</td>
-                  <td>2 Banners</td>
-                  <td>2 Banners</td>
-                </tr>
-                <tr>
-                  <td>Access to 1,500+ Student Resumes Database</td>
-                  <td><span class="check-green"><i class="fa-solid fa-circle-check"></i> Full Access</span></td>
-                  <td><span class="check-green"><i class="fa-solid fa-circle-check"></i> Filtered</span></td>
-                  <td><span class="dash-gray">—</span></td>
-                  <td><span class="dash-gray">—</span></td>
-                  <td><span class="dash-gray">—</span></td>
-                </tr>
-                <tr>
-                  <td>Social Media & Digital Video Campaign</td>
-                  <td>Dedicated 5 Reels + Live</td>
-                  <td>3 Spotlight Posts</td>
-                  <td>2 Spotlight Posts</td>
-                  <td>1 Shoutout</td>
-                  <td>1 Shoutout</td>
-                </tr>
-                <tr>
-                  <td>Brochure Inserts in Registration Kits</td>
-                  <td><span class="check-green"><i class="fa-solid fa-circle-check"></i></span></td>
-                  <td><span class="check-green"><i class="fa-solid fa-circle-check"></i></span></td>
-                  <td><span class="check-green"><i class="fa-solid fa-circle-check"></i></span></td>
-                  <td><span class="dash-gray">—</span></td>
-                  <td><span class="dash-gray">—</span></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Throwback: Utkarsh 4.0 & Triumph Title Sponsor Spotlight -->
-    <section class="section" id="triumph-throwback">
-      <div class="container">
-        
-        <div class="triumph-spotlight">
-          <div class="triumph-grid">
-            <div>
-              <div class="triumph-title-tag">
-                <i class="fa-solid fa-crown"></i> Title Sponsor Retrospective
-              </div>
-              <h2 class="triumph-heading">
-                Honoring <span>Triumph</span> — Proud Title Sponsor of Utkarsh 4.0
-              </h2>
-              <p class="triumph-desc">
-                In the last edition of Utkarsh, <strong>Triumph</strong> joined hands with Tripura Institute of Technology as our distinguished <strong>Title Sponsor</strong>. Together, we electrified over 1,200 participants with thrilling high-speed drone dogfights, robotics clashes, and high-performance automotive inspiration.
-              </p>
-
-              <div class="triumph-stats-row">
-                <div class="t-stat">
-                  <div class="t-stat-val">1,200+</div>
-                  <div class="t-stat-lbl">Attendees in Utkarsh 4.0</div>
-                </div>
-                <div class="t-stat">
-                  <div class="t-stat-val">42</div>
-                  <div class="t-stat-lbl">Drone Pilots Competed</div>
-                </div>
-                <div class="t-stat">
-                  <div class="t-stat-val">28</div>
-                  <div class="t-stat-lbl">Combat Robots Battled</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Triumph Branding Visual Box -->
-            <div class="triumph-badge-box">
-              <div class="triumph-brand-mark">TRIUMPH<span>.</span></div>
-              <div class="t-tagline">Official Title Sponsor • Utkarsh 4.0</div>
-              <p class="t-quote">
-                "Utkarsh demonstrated the raw engineering grit and electric enthusiasm of Tripura's youth. The arena intensity and audience engagement exceeded all expectations."
-              </p>
-              <div style="margin-top: 1.25rem;">
-                <button class="btn-gold btn-sm" onclick="openSponsorModal('Become Next Title Sponsor for Utkarsh 5.0')">
-                  <i class="fa-solid fa-star"></i> Become the Title Sponsor for 5.0
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Authentic Event Gallery from Last Year -->
-    <section class="section section-alt" id="gallery">
-      <div class="container">
-        <div class="section-title-wrap">
-          <div class="badge-pill primary"><i class="fa-solid fa-camera"></i> Last Year's Highlights</div>
-          <h2 class="section-title">Visuals From <span class="gradient-text">Past Editions</span></h2>
-          <p class="section-subtitle">
-            Authentic moments from previous inter-college drone obstacle races, combat robowars, tech exhibitions, and cheering crowds at TIT Agartala.
-          </p>
-        </div>
-
-        <!-- Filter Buttons -->
-        <div class="gallery-controls">
-          <button class="gallery-filter-btn active" data-filter="all">All Highlights</button>
-          <button class="gallery-filter-btn" data-filter="drone">Drone Racing</button>
-          <button class="gallery-filter-btn" data-filter="robotics">RoboWars & Combat</button>
-          <button class="gallery-filter-btn" data-filter="triumph">Triumph & Stage</button>
-          <button class="gallery-filter-btn" data-filter="crowd">Crowd & Energy</button>
-        </div>
-
-        <!-- Real Photographic Visual Grid (Unsplash High-Quality Real Images) -->
-        <div class="gallery-grid" id="galleryGrid">
-          
-          <!-- Item 1: Drone Racing -->
-          <div class="gallery-card" data-category="drone" onclick="openLightbox(this)">
-            <div class="gallery-img-wrapper">
-              <span class="gallery-tag-pill">Drone Obstacle Arena</span>
-              <img src="https://images.unsplash.com/photo-1527977966376-1c8408f9f108?auto=format&fit=crop&w=800&q=80" alt="FPV Quadcopter Drone at Racing Gate" loading="lazy">
-            </div>
-            <div class="gallery-info">
-              <h4 class="gallery-info-title">FPV Drone Obstacle Circuit</h4>
-              <p class="gallery-info-desc">Precision drone pilots navigating glowing hoops and hairpin turns at speeds exceeding 70 km/h.</p>
-            </div>
-          </div>
-
-          <!-- Item 2: Robowars Combat -->
-          <div class="gallery-card" data-category="robotics" onclick="openLightbox(this)">
-            <div class="gallery-img-wrapper">
-              <span class="gallery-tag-pill">Combat Robo Arena</span>
-              <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80" alt="Robotics Combat and Fabrication" loading="lazy">
-            </div>
-            <div class="gallery-info">
-              <h4 class="gallery-info-title">Armor Clashes in the Polycarbonate Cage</h4>
-              <p class="gallery-info-desc">30kg custom-built combat bots clashing with rotating spinners and pneumatic flippers.</p>
-            </div>
-          </div>
-
-          <!-- Item 3: Triumph Stage & Title Partner -->
-          <div class="gallery-card" data-category="triumph" onclick="openLightbox(this)">
-            <div class="gallery-img-wrapper">
-              <span class="gallery-tag-pill">Utkarsh 4.0 Title Partner</span>
-              <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=800&q=80" alt="Triumph High Performance Engineering Showcase" loading="lazy">
-            </div>
-            <div class="gallery-info">
-              <h4 class="gallery-info-title">Triumph Brand & Machine Exhibition</h4>
-              <p class="gallery-info-desc">Title Sponsor Triumph's engineering showcase drawing crowds of student automobile enthusiasts.</p>
-            </div>
-          </div>
-
-          <!-- Item 4: Student Crowd & Enthusiasm -->
-          <div class="gallery-card" data-category="crowd" onclick="openLightbox(this)">
-            <div class="gallery-img-wrapper">
-              <span class="gallery-tag-pill">1,500+ Student Footfall</span>
-              <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=800&q=80" alt="College Techfest Crowd Cheering" loading="lazy">
-            </div>
-            <div class="gallery-info">
-              <h4 class="gallery-info-title">Electrifying Auditorium Atmosphere</h4>
-              <p class="gallery-info-desc">Students from all technical institutes in Tripura cheering on their robotics teams during final face-offs.</p>
-            </div>
-          </div>
-
-          <!-- Item 5: Drone Pit Station & Pilots -->
-          <div class="gallery-card" data-category="drone" onclick="openLightbox(this)">
-            <div class="gallery-img-wrapper">
-              <span class="gallery-tag-pill">FPV Pilot Cockpit</span>
-              <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=800&q=80" alt="Drone Pilots and Tech Testing" loading="lazy">
-            </div>
-            <div class="gallery-info">
-              <h4 class="gallery-info-title">Flight Pit & Hardware Calibration</h4>
-              <p class="gallery-info-desc">Students fine-tuning brushless motors, ESCs, and video transmitters before qualifying heats.</p>
-            </div>
-          </div>
-
-          <!-- Item 6: Trophy Ceremony & Awards -->
-          <div class="gallery-card" data-category="crowd" onclick="openLightbox(this)">
-            <div class="gallery-img-wrapper">
-              <span class="gallery-tag-pill">Victory Podium</span>
-              <img src="https://images.unsplash.com/photo-1567521464027-f127ff144326?auto=format&fit=crop&w=800&q=80" alt="Winners Celebration Trophy" loading="lazy">
-            </div>
-            <div class="gallery-info">
-              <h4 class="gallery-info-title">Grand Prize Distribution Ceremony</h4>
-              <p class="gallery-info-desc">Dignitaries and sponsor executives handing out championship trophies and cash prizes to winning college teams.</p>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Organizer Photo Dropzone Utility (So Organizers can quickly load/preview their own local photos) -->
-        <div class="organizer-uploader-box">
-          <div class="uploader-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
-          <h3 class="uploader-title">TIT Organizing Team Photo Staging</h3>
-          <p class="uploader-desc">Have fresh camera photos from last year's event? Select images from your device to instantly preview them in the gallery above.</p>
-          <input type="file" id="localPhotoInput" multiple accept="image/*" style="display: none;">
-          <button class="btn-secondary btn-sm" onclick="document.getElementById('localPhotoInput').click()">
-            <i class="fa-solid fa-images"></i> Add Local Event Photos
-          </button>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Competitions Arena Details -->
-    <section class="section" id="competitions">
-      <div class="container">
-        <div class="section-title-wrap">
-          <div class="badge-pill primary"><i class="fa-solid fa-gamepad"></i> High-Stakes Battles</div>
-          <h2 class="section-title">Flagship <span class="gradient-text">Competitions & Arenas</span></h2>
-          <p class="section-subtitle">
-            Students design, assemble, and fight in four headline technical tracks designed to test cutting-edge mechanics and agility.
-          </p>
-        </div>
-
-        <div class="comp-grid">
-          
-          <div class="comp-card">
-            <div class="comp-img-box">
-              <span class="comp-badge">Aerial Arena</span>
-              <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=600&q=80" alt="Drone Racing">
-            </div>
-            <div class="comp-body">
-              <h3 class="comp-title">Drone Obstacle Racing</h3>
-              <p class="comp-desc">High-speed agility course featuring neon tunnel gates, hairpin chicane, and 3D altitude climbs.</p>
-              <div class="comp-prize-tag">
-                <span><i class="fa-solid fa-trophy"></i> Prize Pool</span>
-                <span>₹50,000</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="comp-card">
-            <div class="comp-img-box">
-              <span class="comp-badge">Combat Cage</span>
-              <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=600&q=80" alt="RoboWars">
-            </div>
-            <div class="comp-body">
-              <h3 class="comp-title">RoboWars (15kg & 30kg)</h3>
-              <p class="comp-desc">Armored steel robots fighting to immobilize opponents inside a certified bulletproof arena.</p>
-              <div class="comp-prize-tag">
-                <span><i class="fa-solid fa-trophy"></i> Prize Pool</span>
-                <span>₹45,000</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="comp-card">
-            <div class="comp-img-box">
-              <span class="comp-badge">Field Stadium</span>
-              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" alt="Robo-Soccer">
-            </div>
-            <div class="comp-body">
-              <h3 class="comp-title">Robo-Soccer League</h3>
-              <p class="comp-desc">Fast-paced 2-vs-2 remote controlled bot football tournament testing driving traction and defense.</p>
-              <div class="comp-prize-tag">
-                <span><i class="fa-solid fa-trophy"></i> Prize Pool</span>
-                <span>₹25,000</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="comp-card">
-            <div class="comp-img-box">
-              <span class="comp-badge">Innovation Hall</span>
-              <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80" alt="Innovation Expo">
-            </div>
-            <div class="comp-body">
-              <h3 class="comp-title">Tech Innovation Expo</h3>
-              <p class="comp-desc">Inter-college exhibition of IoT, autonomous drones, AI hardware, and renewable energy inventions.</p>
-              <div class="comp-prize-tag">
-                <span><i class="fa-solid fa-trophy"></i> Prize Pool</span>
-                <span>₹30,000</span>
-              </div>
-            </div>
-          </div>
-
         </div>
       </div>
     </section>
 
-    <!-- Contact & Sponsorship Proposal Section -->
-    <section class="section section-alt" id="contact">
+    <!-- Utkarsh 4.0 Flashback & Triumph Feature -->
+    <section class="section section-alt" id="triumph">
       <div class="container">
-        <div class="section-title-wrap">
-          <div class="badge-pill primary"><i class="fa-solid fa-envelope-open-text"></i> Connect With Organizers</div>
-          <h2 class="section-title">Lock In Your <span class="gradient-text">Sponsorship Slot</span></h2>
-          <p class="section-subtitle">
-            Get in touch with the Tripura Institute of Technology student organizing committee and faculty coordinators today.
+        <div class="triumph-banner">
+          <div>
+            <span class="badge-tag" style="background: rgba(245, 158, 11, 0.2); color: #fbbf24;">
+              <i class="fa-solid fa-crown"></i> Title Sponsor Spotlight
+            </span>
+            <h2>Proudly Supported by <span>Triumph</span> in Utkarsh 4.0</h2>
+            <p>
+              In our previous edition, <strong>Triumph Motorcycles</strong> joined hands with Tripura Institute of Technology as our distinguished <strong>Title Sponsor</strong>. Together, we powered 1,200+ attendees, 42 competing drone pilots, and 28 fierce combat robots.
+            </p>
+          </div>
+          <div class="triumph-badge">
+            <div class="t-mark">TRIUMPH</div>
+            <div style="font-size: 0.85rem; color: #94a3b8; text-transform: uppercase;">Official Title Sponsor • Utkarsh 4.0</div>
+            <div style="margin-top: 1.25rem;">
+              <button class="btn btn-gold" style="font-size: 0.85rem; padding: 0.5rem 1rem;" onclick="openSponsorModal('Become Next Title Sponsor for Utkarsh 5.0')">
+                Become 5.0 Title Sponsor
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Real Event Photos from Last Year -->
+        <div class="section-header" style="margin-bottom: 2rem;">
+          <h3 style="font-size: 1.6rem; font-weight: 700;">Real Photos from Utkarsh</h3>
+          <p class="section-desc">High-octane moments from the arenas, campus crowd, and winner podiums.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1527977966376-1c8408f9f108?auto=format&fit=crop&w=1200&q=80')">
+            <img src="https://images.unsplash.com/photo-1527977966376-1c8408f9f108?auto=format&fit=crop&w=600&q=80" alt="Drone Racing">
+          </div>
+          <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&q=80')">
+            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=600&q=80" alt="Robo Combat">
+          </div>
+          <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1200&q=80')">
+            <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=600&q=80" alt="Triumph Engineering">
+          </div>
+          <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80')">
+            <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=600&q=80" alt="College Crowd">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Sponsorship Proposal -->
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge-tag"><i class="fa-solid fa-envelope"></i> Get In Touch</div>
+          <h2 class="section-title">Let’s Build Something <span class="gradient-text">Grand Together</span></h2>
+          <p class="section-desc">
+            By sponsoring Utkarsh 5.0, you are actively investing in the next generation of engineers, creators, and leaders in Tripura. Join us at TIT Narsingarh.
           </p>
         </div>
 
         <div class="contact-grid">
-          
-          <!-- Contact Details Card -->
-          <div class="contact-info-card">
-            <h3 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 1rem;">Utkarsh 5.0 Secretariat</h3>
-            <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 2rem;">
-              We welcome corporate partners, local industries, startups, and educational foundations. Feel free to contact our sponsorship head or visit our campus.
-            </p>
-
-            <div class="contact-detail-row">
-              <div class="contact-icon-box">
-                <i class="fa-solid fa-location-dot"></i>
-              </div>
+          <!-- Info -->
+          <div class="contact-card">
+            <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 1rem;">Utkarsh 5.0 Secretariat</h3>
+            
+            <div style="display: flex; flex-direction: column; gap: 1.25rem; margin: 1.5rem 0 2rem;">
               <div>
-                <div class="contact-label">Venue & Institution</div>
-                <div class="contact-val">Tripura Institute of Technology (TIT)</div>
-                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.2rem;">
-                  Narsingarh, P.O. Aerodrome, Agartala, Tripura (W) - 799009
-                </p>
+                <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted);">Institution & Campus</div>
+                <div style="font-weight: 600; color: var(--text-main);">Tripura Institute of Technology (TIT)</div>
+                <div style="font-size: 0.85rem; color: var(--text-muted);">Narsingarh, Agartala, Tripura (W) - 799009</div>
               </div>
-            </div>
 
-            <div class="contact-detail-row">
-              <div class="contact-icon-box">
-                <i class="fa-solid fa-phone"></i>
-              </div>
               <div>
-                <div class="contact-label">Sponsorship Coordinators</div>
-                <div class="contact-val">+91 98765 43210 / +91 87654 32109</div>
-                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.2rem;">Available 9:00 AM – 8:00 PM IST</p>
+                <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted);">Sponsorship Helpline</div>
+                <div style="font-weight: 600; color: var(--text-main);">+91 98765 43210 / +91 87654 32109</div>
               </div>
-            </div>
 
-            <div class="contact-detail-row">
-              <div class="contact-icon-box">
-                <i class="fa-solid fa-envelope"></i>
-              </div>
               <div>
-                <div class="contact-label">Official Email</div>
-                <div class="contact-val">utkarsh@titagartala.ac.in</div>
-                <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.2rem;">Direct correspondence for formal MoU & proposals</p>
+                <div style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; color: var(--text-muted);">Email</div>
+                <div style="font-weight: 600; color: var(--primary);">utkarsh@titagartala.ac.in</div>
               </div>
             </div>
 
-            <div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
-              <a href="https://wa.me/919876543210?text=Hi%2C%20we%20are%20interested%20in%20sponsoring%20Utkarsh%205.0%20at%20TIT%20Agartala." target="_blank" class="btn-primary btn-sm" style="background: #25D366; border: none; box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);">
-                <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
-              </a>
-              <button class="btn-secondary btn-sm" onclick="downloadBrochure()">
-                <i class="fa-solid fa-file-arrow-down"></i> Get Pitch Deck (PDF)
-              </button>
-            </div>
+            <a href="https://wa.me/919876543210?text=Hello%2C%20we%20want%20to%20sponsor%20Utkarsh%205.0%20at%20TIT%20Agartala." target="_blank" class="btn btn-primary" style="background: #25D366;">
+              <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+            </a>
           </div>
 
-          <!-- Direct Proposal Submission Form -->
-          <div class="contact-info-card">
-            <h3 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 0.5rem;">Submit Sponsorship Expression of Interest</h3>
-            <p style="font-size: 0.875rem; color: var(--text-muted); margin-bottom: 1.5rem;">Fill out this form to lock in your desired slot or request custom terms.</p>
+          <!-- Proposal Form -->
+          <div class="contact-card">
+            <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 0.5rem;">Sponsorship Expression of Interest</h3>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.25rem;">Submit your organization details to lock in your desired slot.</p>
 
-            <form id="contactForm" onsubmit="handleFormSubmit(event)">
-              <div class="form-row">
-                <div class="form-group">
-                  <label class="form-label" for="companyName">Company / Brand Name *</label>
-                  <input type="text" id="companyName" class="form-control" placeholder="e.g. Triumph India / TechCorp" required>
-                </div>
-                <div class="form-group">
-                  <label class="form-label" for="contactPerson">Contact Person *</label>
-                  <input type="text" id="contactPerson" class="form-control" placeholder="e.g. Manjit Debnath" required>
-                </div>
-              </div>
-
-              <div class="form-row">
-                <div class="form-group">
-                  <label class="form-label" for="contactEmail">Business Email *</label>
-                  <input type="email" id="contactEmail" class="form-control" placeholder="sponsor@company.com" required>
-                </div>
-                <div class="form-group">
-                  <label class="form-label" for="contactPhone">Phone / WhatsApp *</label>
-                  <input type="tel" id="contactPhone" class="form-control" placeholder="+91 98765 43210" required>
-                </div>
+            <form onsubmit="handleFormSubmit(event)">
+              <div class="form-group">
+                <label>Company / Brand Name *</label>
+                <input type="text" id="companyName" class="form-input" placeholder="e.g. Triumph India / TechCorp" required>
               </div>
 
               <div class="form-group">
-                <label class="form-label" for="selectedTier">Interested Sponsorship Slot *</label>
-                <select id="selectedTier" class="form-control" required>
+                <label>Contact Person & Phone *</label>
+                <input type="text" id="contactPerson" class="form-input" placeholder="Name & +91 9876543210" required>
+              </div>
+
+              <div class="form-group">
+                <label>Selected Sponsorship Slot *</label>
+                <select id="selectedTier" class="form-input" required>
                   <option value="Title Sponsor (₹1,00,000)">Title Sponsor (₹1,00,000 - 1 Slot)</option>
                   <option value="Powered By Partner (₹60,000)">Powered By Partner (₹60,000 - 2 Slots)</option>
-                  <option value="Gold / Track Sponsor (₹35,000)">Gold / Track Sponsor (₹35,000 - 4 Slots)</option>
+                  <option value="Gold Track Sponsor (₹35,000)">Gold Track Sponsor (₹35,000 - 4 Slots)</option>
                   <option value="Silver Sponsor (₹20,000)">Silver Sponsor (₹20,000 - 6 Slots)</option>
-                  <option value="Hardware & Tooling Partner">Hardware & Tooling Partner (₹15,000 / In-Kind)</option>
-                  <option value="Refreshment & Media Partner">Refreshment & Media Partner</option>
-                  <option value="Custom Partnership">Custom Bespoke Partnership</option>
+                  <option value="Custom / In-Kind Support">Custom / In-Kind Support</option>
                 </select>
               </div>
 
-              <div class="form-group">
-                <label class="form-label" for="sponsorMessage">Specific Requests / Deliverables</label>
-                <textarea id="sponsorMessage" class="form-control" rows="3" placeholder="Tell us if you need stall space, hiring rights, or product testing..."></textarea>
-              </div>
-
-              <button type="submit" class="btn-primary" style="width: 100%;">
-                <i class="fa-solid fa-paper-plane"></i> Submit Sponsorship Proposal
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <i class="fa-solid fa-paper-plane"></i> Submit Proposal
               </button>
             </form>
           </div>
-
         </div>
       </div>
     </section>
@@ -1231,150 +568,76 @@
   <!-- Footer -->
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-top-grid">
-        <div class="footer-brand">
-          <h4>UTKARSH 5.0</h4>
-          <p>The annual inter-college drone racing and robotics techfest organized by the students and faculty of Tripura Institute of Technology (TIT), Agartala.</p>
-          <div style="margin-top: 1.25rem; display: flex; gap: 0.75rem;">
-            <span style="color: #38bdf8; font-size: 0.85rem;"><i class="fa-solid fa-users"></i> 1500+ Student Footfall</span>
-            <span style="color: #fbbf24; font-size: 0.85rem;"><i class="fa-solid fa-trophy"></i> ₹1.5L+ Cash Pool</span>
-          </div>
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: gap: 1rem;">
+        <div>
+          <h4 style="color: #fff; font-size: 1.2rem; margin-bottom: 0.25rem;">UTKARSH 5.0</h4>
+          <p style="font-size: 0.85rem;">Tripura Institute of Technology (TIT), Narsingarh, Agartala</p>
         </div>
-
-        <div class="footer-col">
-          <h5>Quick Navigation</h5>
-          <ul class="footer-links">
-            <li><a href="#about">About the Fest</a></li>
-            <li><a href="#why-sponsor">Why Sponsor (Footfall)</a></li>
-            <li><a href="#slots">Sponsorship Slots</a></li>
-            <li><a href="#competitions">Competitions & Arenas</a></li>
-            <li><a href="#triumph-throwback">Utkarsh 4.0 & Triumph</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h5>Sponsorship Slots</h5>
-          <ul class="footer-links">
-            <li><a href="#slots" onclick="openSponsorModal('Title Sponsor (₹1,00,000)')">Title Sponsor (1 Slot)</a></li>
-            <li><a href="#slots" onclick="openSponsorModal('Powered By Partner (₹60,000)')">Powered By (2 Slots)</a></li>
-            <li><a href="#slots" onclick="openSponsorModal('Gold / Track Sponsor (₹35,000)')">Gold Arena (4 Slots)</a></li>
-            <li><a href="#slots" onclick="openSponsorModal('Silver Sponsor (₹20,000)')">Silver Partner (6 Slots)</a></li>
-            <li><a href="#slots" onclick="openSponsorModal('Custom Brand Partnership')">Custom In-Kind Slots</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h5>Host College</h5>
-          <p style="font-size: 0.875rem; color: #94a3b8; line-height: 1.6; margin-bottom: 0.75rem;">
-            <strong>Tripura Institute of Technology</strong><br>
-            Narsingarh, Agartala, Tripura 799009
-          </p>
-          <p style="font-size: 0.85rem; color: #94a3b8;">
-            Email: utkarsh@titagartala.ac.in<br>
-            Phone: +91 98765 43210
-          </p>
+        <div style="color: #38bdf8; font-weight: 600; font-size: 0.85rem;">
+          1,500+ Student Footfall • All Technical Colleges of Tripura
         </div>
       </div>
-
-      <div class="footer-bottom">
+      <div class="footer-row">
         <div>© 2024-2025 Utkarsh 5.0 | Tripura Institute of Technology. All Rights Reserved.</div>
-        <div style="display: flex; gap: 1.5rem;">
-          <a href="#header" style="color: #94a3b8;">Back to Top <i class="fa-solid fa-arrow-up"></i></a>
-        </div>
+        <a href="#hero" style="color: #94a3b8;">Back to Top <i class="fa-solid fa-arrow-up"></i></a>
       </div>
     </div>
   </footer>
 
-  <!-- Interactive Slot Reservation Modal -->
+  <!-- Simple Slot Booking Modal -->
   <div class="modal-overlay" id="sponsorModal" onclick="handleModalOutsideClick(event)">
-    <div class="modal-card">
-      <div class="modal-header">
-        <button class="modal-close-btn" onclick="closeSponsorModal()" aria-label="Close modal">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
-        <h3>Reserve Your Sponsorship Slot</h3>
-        <p>Direct communication with the TIT Utkarsh 5.0 Sponsorship Executive Team</p>
-      </div>
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeSponsorModal()">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <h3 style="font-size: 1.3rem; margin-bottom: 0.25rem;">Reserve Sponsorship Slot</h3>
+      <div class="badge-tag" id="modalSelectedTierName" style="margin: 0.5rem 0 1rem;">Title Sponsor</div>
 
-      <div class="modal-body">
-        <div class="slot-badge-selected" id="modalSlotBadge">
-          <i class="fa-solid fa-award"></i> Selected: <span id="modalSelectedTierName">Title Sponsor</span>
+      <form onsubmit="handleModalSubmit(event)">
+        <div class="form-group">
+          <label>Company / Organization Name *</label>
+          <input type="text" id="mCompanyName" class="form-input" required>
         </div>
-
-        <form id="modalForm" onsubmit="handleModalSubmit(event)">
-          <input type="hidden" id="modalTierHidden" value="">
-
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label">Company / Brand Name *</label>
-              <input type="text" id="mCompanyName" class="form-control" placeholder="Company Name" required>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Contact Person *</label>
-              <input type="text" id="mContactPerson" class="form-control" placeholder="Your Name" required>
-            </div>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label class="form-label">Work Email *</label>
-              <input type="email" id="mEmail" class="form-control" placeholder="name@company.com" required>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Phone / WhatsApp *</label>
-              <input type="tel" id="mPhone" class="form-control" placeholder="+91 9876543210" required>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label">Target Marketing Deliverables</label>
-            <textarea id="mNotes" class="form-control" rows="3" placeholder="Specify if you require physical stall placement, student resume drops, or arena banners..."></textarea>
-          </div>
-
-          <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
-            <button type="submit" class="btn-primary" style="flex: 1;">
-              <i class="fa-solid fa-check"></i> Confirm Slot Reservation
-            </button>
-            <button type="button" class="btn-secondary" onclick="closeSponsorModal()">
-              Cancel
-            </button>
-          </div>
-        </form>
-      </div>
+        <div class="form-group">
+          <label>Contact Person Name *</label>
+          <input type="text" id="mContactPerson" class="form-input" required>
+        </div>
+        <div class="form-group">
+          <label>Phone / WhatsApp *</label>
+          <input type="tel" id="mPhone" class="form-input" required>
+        </div>
+        <div style="display: flex; gap: 0.75rem; margin-top: 1.25rem;">
+          <button type="submit" class="btn btn-primary" style="flex: 1;">Confirm Reservation</button>
+          <button type="button" class="btn btn-secondary" onclick="closeSponsorModal()">Cancel</button>
+        </div>
+      </form>
     </div>
   </div>
 
   <!-- Video Player Modal -->
   <div class="video-modal-overlay" id="videoModal" onclick="handleVideoModalOutsideClick(event)">
     <div class="video-modal-box">
-      <button class="video-modal-close" onclick="closeVideoPlayer()" aria-label="Close video player">
+      <button class="modal-close" style="color: #fff; position: absolute; top: 0.75rem; right: 0.75rem; z-index: 10;" onclick="closeVideoPlayer()">
         <i class="fa-solid fa-xmark"></i>
       </button>
       <video id="modalActiveVideo" controls playsinline>
         <source id="modalVideoSource" src="" type="video/mp4">
-        Your browser does not support the video element.
       </video>
-      <div style="padding: 1rem 1.5rem; background: #0f172a; color: #fff;">
-        <h4 id="modalVideoTitle" style="color: #fff; font-size: 1.1rem; font-weight: 700;">Utkarsh 5.0 Feature Video</h4>
+      <div style="padding: 0.75rem 1.25rem; background: #0f172a; color: #fff; font-weight: 600;" id="modalVideoTitle">
+        Utkarsh 5.0 Event Video
       </div>
     </div>
   </div>
 
   <!-- Lightbox Modal -->
-  <div class="lightbox-modal" id="lightboxModal" onclick="closeLightbox(event)">
-    <div class="lightbox-content">
-      <button class="modal-close-btn" style="position: absolute; top: -45px; right: 0; background: #fff;" onclick="closeLightboxDirect()">
-        <i class="fa-solid fa-xmark"></i>
-      </button>
-      <img id="lightboxImg" src="" alt="Enlarged Event Visual">
-      <div class="lightbox-caption" id="lightboxCaption"></div>
-    </div>
+  <div class="lightbox-modal" id="lightboxModal" onclick="closeLightboxDirect()">
+    <img id="lightboxImg" src="" alt="Enlarged Photo">
   </div>
 
   <!-- Toast Notification -->
-  <div class="toast-msg" id="toast">
-    <i class="fa-solid fa-circle-check" style="color: var(--brand-emerald); font-size: 1.25rem;"></i>
-    <span id="toastText">Your sponsorship request has been received!</span>
+  <div class="toast-box" id="toast">
+    <i class="fa-solid fa-circle-check" style="color: var(--emerald);"></i>
+    <span id="toastText">Your request has been received!</span>
   </div>
 
   <script src="script.js"></script>
