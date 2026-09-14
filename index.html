@@ -379,6 +379,66 @@
               </button>
             </div>
           </div>
+
+          <!-- Portrait Reel 4: Drone Arena & Combat Action -->
+          <div class="reel-box">
+            <div class="reel-screen">
+              <span class="reel-badge"><i class="fa-solid fa-crosshairs"></i> Reel 4 • Drone Action</span>
+              <video autoplay loop muted playsinline preload="auto">
+                <source src="videos/utkarsh4_drone_action.mp4" type="video/mp4">
+              </video>
+              <button class="reel-play-overlay" onclick="openVideoPlayer('videos/utkarsh4_drone_action.mp4', 'Utkarsh 4.0 Drone Arena & Combat Action (Reel 4)', true)" aria-label="Play Reel 4">
+                <i class="fa-solid fa-play"></i>
+              </button>
+            </div>
+            <div class="reel-body">
+              <h3 class="reel-title">Drone Arena & Combat Thrills</h3>
+              <p class="reel-desc">High-speed drone maneuvering, obstacle tracks, and intense robotics showdowns at TIT.</p>
+              <button class="btn btn-secondary" style="width: 100%; font-size: 0.8rem; padding: 0.45rem; margin-top: 0.75rem;" onclick="openVideoPlayer('videos/utkarsh4_drone_action.mp4', 'Utkarsh 4.0 Drone Arena & Combat Action (Reel 4)', true)">
+                <i class="fa-solid fa-expand"></i> Fullscreen Reel
+              </button>
+            </div>
+          </div>
+
+          <!-- Portrait Reel 5: Festival Aftermovie -->
+          <div class="reel-box">
+            <div class="reel-screen">
+              <span class="reel-badge"><i class="fa-solid fa-film"></i> Reel 5 • Aftermovie</span>
+              <video autoplay loop muted playsinline preload="auto">
+                <source src="videos/utkarsh4_aftermovie_recap.mp4" type="video/mp4">
+              </video>
+              <button class="reel-play-overlay" onclick="openVideoPlayer('videos/utkarsh4_aftermovie_recap.mp4', 'Utkarsh 4.0 Festival Aftermovie (Reel 5)', true)" aria-label="Play Reel 5">
+                <i class="fa-solid fa-play"></i>
+              </button>
+            </div>
+            <div class="reel-body">
+              <h3 class="reel-title">Festival Highlights & Aftermovie</h3>
+              <p class="reel-desc">Vibrant campus energy, roaring student cheers, and unforgettable techno-cultural memories.</p>
+              <button class="btn btn-secondary" style="width: 100%; font-size: 0.8rem; padding: 0.45rem; margin-top: 0.75rem;" onclick="openVideoPlayer('videos/utkarsh4_aftermovie_recap.mp4', 'Utkarsh 4.0 Festival Aftermovie (Reel 5)', true)">
+                <i class="fa-solid fa-expand"></i> Fullscreen Reel
+              </button>
+            </div>
+          </div>
+
+          <!-- Portrait Reel 6: Grand Opening Ceremony -->
+          <div class="reel-box">
+            <div class="reel-screen">
+              <span class="reel-badge"><i class="fa-solid fa-ribbon"></i> Reel 6 • Grand Opening</span>
+              <video autoplay loop muted playsinline preload="auto">
+                <source src="videos/utkarsh4_opening_ceremony.mp4" type="video/mp4">
+              </video>
+              <button class="reel-play-overlay" onclick="openVideoPlayer('videos/utkarsh4_opening_ceremony.mp4', 'Grand Opening Ceremony at Civil Block (Reel 6)', true)" aria-label="Play Reel 6">
+                <i class="fa-solid fa-play"></i>
+              </button>
+            </div>
+            <div class="reel-body">
+              <h3 class="reel-title">Grand Opening at Civil Block</h3>
+              <p class="reel-desc">Inauguration ceremony, faculty addresses, and the official opening moments of Utkarsh 4.0.</p>
+              <button class="btn btn-secondary" style="width: 100%; font-size: 0.8rem; padding: 0.45rem; margin-top: 0.75rem;" onclick="openVideoPlayer('videos/utkarsh4_opening_ceremony.mp4', 'Grand Opening Ceremony at Civil Block (Reel 6)', true)">
+                <i class="fa-solid fa-expand"></i> Fullscreen Reel
+              </button>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -514,24 +574,198 @@
           </div>
         </div>
 
-        <!-- Real Event Photos from Last Year -->
-        <div class="section-header" style="margin-bottom: 2rem;">
-          <h3 style="font-size: 1.6rem; font-weight: 700;">Real Photos from Utkarsh</h3>
-          <p class="section-desc">High-octane moments from the arenas, campus crowd, and winner podiums.</p>
+        <!-- Real Event Photos from Last Year: 22 Authentic Utkarsh 4.0 Photos -->
+        <div class="section-header" style="margin-bottom: 1.5rem;">
+          <div class="badge-tag gold"><i class="fa-solid fa-images"></i> Utkarsh 4.0 Memories</div>
+          <h3 style="font-size: 2rem; font-weight: 800;">Utkarsh 4.0 <span class="gradient-text">Photo Gallery</span></h3>
+          <p class="section-desc">Authentic snapshots from Utkarsh 4.0 at TIT: inauguration at the Civil Block, high-energy arenas, model exhibits, and grand finale celebrations.</p>
         </div>
 
-        <div class="gallery-grid">
-          <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1527977966376-1c8408f9f108?auto=format&fit=crop&w=1200&q=80')">
-            <img src="https://images.unsplash.com/photo-1527977966376-1c8408f9f108?auto=format&fit=crop&w=600&q=80" alt="Drone Racing">
+        <div class="gallery-filters">
+          <button class="gallery-filter-btn active" onclick="filterGallery('all', this)">All Photos (22)</button>
+          <button class="gallery-filter-btn" onclick="filterGallery('opening', this)">Grand Opening Ceremony (5)</button>
+          <button class="gallery-filter-btn" onclick="filterGallery('recap', this)">Memory Recap (14)</button>
+          <button class="gallery-filter-btn" onclick="filterGallery('finale', this)">Final Day Highlights (3)</button>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid">
+          <!-- Opening Ceremony Photos (5) -->
+          <div class="gallery-item" data-category="opening" onclick="openLightbox('gallery/utkarsh4_event_photo_1.webp')">
+            <img src="gallery/utkarsh4_event_photo_1.webp" alt="Civil Block Inauguration Ceremony" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span>Grand Opening</span>
+              <p>Civil Block Inauguration Ceremony</p>
+            </div>
           </div>
-          <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=1200&q=80')">
-            <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=600&q=80" alt="Robo Combat">
+
+          <div class="gallery-item" data-category="opening" onclick="openLightbox('gallery/utkarsh4_event_photo_2.webp')">
+            <img src="gallery/utkarsh4_event_photo_2.webp" alt="Dignitaries & Lighting of the Lamp" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span>Grand Opening</span>
+              <p>Dignitaries & Lighting of the Lamp</p>
+            </div>
           </div>
-          <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=1200&q=80')">
-            <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=600&q=80" alt="Triumph Engineering">
+
+          <div class="gallery-item" data-category="opening" onclick="openLightbox('gallery/utkarsh4_event_photo_3.webp')">
+            <img src="gallery/utkarsh4_event_photo_3.webp" alt="Faculty & Chief Guests Address" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span>Grand Opening</span>
+              <p>Faculty & Chief Guests Address</p>
+            </div>
           </div>
-          <div class="gallery-item" onclick="openLightbox('https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=1200&q=80')">
-            <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&w=600&q=80" alt="College Crowd">
+
+          <div class="gallery-item" data-category="opening" onclick="openLightbox('gallery/utkarsh4_event_photo_4.webp')">
+            <img src="gallery/utkarsh4_event_photo_4.webp" alt="Opening Day Student Gathering" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span>Grand Opening</span>
+              <p>Opening Day Student Gathering</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="opening" onclick="openLightbox('gallery/utkarsh4_event_photo_5.webp')">
+            <img src="gallery/utkarsh4_event_photo_5.webp" alt="Welcome Felicitations" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span>Grand Opening</span>
+              <p>Welcome Felicitations</p>
+            </div>
+          </div>
+
+          <!-- Final Day Highlights (3) -->
+          <div class="gallery-item" data-category="finale" onclick="openLightbox('gallery/utkarsh4_event_photo_6.webp')">
+            <img src="gallery/utkarsh4_event_photo_6.webp" alt="Valedictory Ceremony & Trophies" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span>Final Day</span>
+              <p>Valedictory Ceremony & Trophies</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="finale" onclick="openLightbox('gallery/utkarsh4_event_photo_7.webp')">
+            <img src="gallery/utkarsh4_event_photo_7.webp" alt="Winner Felicitations & Medals" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span>Final Day</span>
+              <p>Winner Felicitations & Medals</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="finale" onclick="openLightbox('gallery/utkarsh4_event_photo_8.webp')">
+            <img src="gallery/utkarsh4_event_photo_8.webp" alt="Grand Finale Celebrations" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span>Final Day</span>
+              <p>Grand Finale Celebrations</p>
+            </div>
+          </div>
+
+          <!-- Memory Recap Moments (14) -->
+          <div class="gallery-item" data-category="recap" onclick="openLightbox('gallery/utkarsh4_memory_recap_1.webp')">
+            <img src="gallery/utkarsh4_memory_recap_1.webp" alt="Drone Arena Showdown" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span>Memory Recap</span>
+              <p>Drone Arena Showdown</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="recap" onclick="openLightbox('gallery/utkarsh4_memory_recap_2.webp')">
+            <img src="gallery/utkarsh4_memory_recap_2.webp" alt="Robotics Track Challenge" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span>Memory Recap</span>
+              <p>Robotics Track Challenge</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="recap" onclick="openLightbox('gallery/utkarsh4_memory_recap_3.webp')">
+            <img src="gallery/utkarsh4_memory_recap_3.webp" alt="Central Campus Fest Atmosphere" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span>Memory Recap</span>
+              <p>Central Campus Fest Atmosphere</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="recap" onclick="openLightbox('gallery/utkarsh4_memory_recap_4.webp')">
+            <img src="gallery/utkarsh4_memory_recap_4.webp" alt="Model Exhibits & Technical Hardware" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span>Memory Recap</span>
+              <p>Model Exhibits & Technical Hardware</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="recap" onclick="openLightbox('gallery/utkarsh4_memory_recap_5.webp')">
+            <img src="gallery/utkarsh4_memory_recap_5.webp" alt="Student Innovators & Delegations" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span>Memory Recap</span>
+              <p>Student Innovators & Delegations</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="recap" onclick="openLightbox('gallery/utkarsh4_memory_recap_6.webp')">
+            <img src="gallery/utkarsh4_memory_recap_6.webp" alt="High-Energy Flashmob Crowds" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span>Memory Recap</span>
+              <p>High-Energy Flashmob Crowds</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="recap" onclick="openLightbox('gallery/utkarsh4_memory_recap_7.webp')">
+            <img src="gallery/utkarsh4_memory_recap_7.webp" alt="Technical Stalls & Sponsor Display" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span>Memory Recap</span>
+              <p>Technical Stalls & Sponsor Display</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="recap" onclick="openLightbox('gallery/utkarsh4_memory_recap_8.webp')">
+            <img src="gallery/utkarsh4_memory_recap_8.webp" alt="Inter-College Team Preparations" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span>Memory Recap</span>
+              <p>Inter-College Team Preparations</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="recap" onclick="openLightbox('gallery/utkarsh4_memory_recap_9.webp')">
+            <img src="gallery/utkarsh4_memory_recap_9.webp" alt="Combat Robotics Pit Arena" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span>Memory Recap</span>
+              <p>Combat Robotics Pit Arena</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="recap" onclick="openLightbox('gallery/utkarsh4_memory_recap_10.webp')">
+            <img src="gallery/utkarsh4_memory_recap_10.webp" alt="Main Stage Lighting & Beats" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span>Memory Recap</span>
+              <p>Main Stage Lighting & Beats</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="recap" onclick="openLightbox('gallery/utkarsh4_memory_recap_11.webp')">
+            <img src="gallery/utkarsh4_memory_recap_11.webp" alt="Extreme Stunts & Cheering Crowd" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span>Memory Recap</span>
+              <p>Extreme Stunts & Cheering Crowd</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="recap" onclick="openLightbox('gallery/utkarsh4_memory_recap_12.webp')">
+            <img src="gallery/utkarsh4_memory_recap_12.webp" alt="Faculty & Organizers Spotlight" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span>Memory Recap</span>
+              <p>Faculty & Organizers Spotlight</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="recap" onclick="openLightbox('gallery/utkarsh4_memory_recap_13.webp')">
+            <img src="gallery/utkarsh4_memory_recap_13.webp" alt="Engineering Excellence Moments" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span>Memory Recap</span>
+              <p>Engineering Excellence Moments</p>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="recap" onclick="openLightbox('gallery/utkarsh4_memory_recap_14.webp')">
+            <img src="gallery/utkarsh4_memory_recap_14.webp" alt="Utkarsh Legacy & Student Spirit" loading="lazy">
+            <div class="gallery-item-overlay">
+              <span>Memory Recap</span>
+              <p>Utkarsh Legacy & Student Spirit</p>
+            </div>
           </div>
         </div>
       </div>

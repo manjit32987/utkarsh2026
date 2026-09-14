@@ -268,6 +268,22 @@ function closeLightboxDirect() {
   }
 }
 
+// 6. Utkarsh 4.0 Gallery Filter
+function filterGallery(category, btn) {
+  document.querySelectorAll('.gallery-filter-btn').forEach((b) => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+
+  const items = document.querySelectorAll('.gallery-item');
+  items.forEach((item) => {
+    const itemCat = item.getAttribute('data-category');
+    if (category === 'all' || itemCat === category) {
+      item.style.display = 'block';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+}
+
 // Close on Escape Key
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
