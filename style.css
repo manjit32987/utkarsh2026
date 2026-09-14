@@ -160,6 +160,18 @@ img {
   font-size: 1.2rem;
 }
 
+.brand-logo-img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  background: #ffffff;
+  padding: 3px;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
+}
+
 .brand-name {
   font-size: 1.15rem;
   font-weight: 800;
@@ -482,8 +494,24 @@ img {
   color: var(--text-muted);
 }
 
-/* 4 Videos Grid */
-.videos-grid {
+/* ==========================================
+   Landscape & Portrait Videos Showcase
+   ========================================== */
+.video-section-header {
+  margin-bottom: 2rem;
+}
+
+.video-category-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 2.5rem 0 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--text-main);
+}
+
+.videos-grid-landscape {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 2rem;
@@ -495,11 +523,18 @@ img {
   border-radius: var(--radius-lg);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.video-box:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary);
 }
 
 .video-screen {
   position: relative;
-  padding-top: 56.25%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
   background: #0f172a;
 }
 
@@ -516,13 +551,43 @@ img {
   position: absolute;
   top: 1rem;
   left: 1rem;
-  background: rgba(15, 23, 42, 0.8);
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(6px);
   color: #fff;
   font-size: 0.75rem;
   font-weight: 700;
   padding: 0.3rem 0.75rem;
   border-radius: var(--radius-full);
   z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.video-play-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(2, 132, 199, 0.9);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  transition: all var(--transition);
+  z-index: 3;
+}
+
+.video-box:hover .video-play-overlay {
+  background: var(--gold);
+  transform: translate(-50%, -50%) scale(1.1);
 }
 
 .video-body {
@@ -532,12 +597,111 @@ img {
 .video-body h3 {
   font-size: 1.15rem;
   margin-bottom: 0.35rem;
+  line-height: 1.3;
 }
 
 .video-body p {
   font-size: 0.85rem;
   color: var(--text-muted);
   margin-bottom: 1rem;
+}
+
+/* Vertical / Portrait Video Reels (9:16) */
+.reels-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.reel-box {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.reel-box:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--primary);
+}
+
+.reel-screen {
+  position: relative;
+  width: 100%;
+  padding-top: 150%; /* Vertical reel ratio */
+  background: #000;
+  overflow: hidden;
+}
+
+.reel-screen video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reel-play-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(4px);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  cursor: pointer;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  transition: all var(--transition);
+  z-index: 3;
+}
+
+.reel-box:hover .reel-play-overlay {
+  background: var(--primary);
+  border-color: #fff;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.reel-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.reel-body {
+  padding: 1.25rem;
+}
+
+.reel-body h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.reel-body p {
+  font-size: 0.825rem;
+  color: var(--text-muted);
 }
 
 /* Sponsorship Slots */
@@ -801,6 +965,11 @@ img {
   border-radius: var(--radius-md);
   overflow: hidden;
   position: relative;
+  transition: max-width var(--transition);
+}
+
+.video-modal-box.portrait-mode {
+  max-width: 440px;
 }
 
 .video-modal-box video {
@@ -881,8 +1050,11 @@ img {
 
 /* Responsive */
 @media (max-width: 992px) {
-  .hero-grid, .pillar-grid, .videos-grid, .triumph-banner, .contact-grid {
+  .hero-grid, .pillar-grid, .videos-grid-landscape, .triumph-banner, .contact-grid {
     grid-template-columns: 1fr;
+  }
+  .reels-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
   .slots-grid, .hl-grid {
     grid-template-columns: 1fr;
@@ -908,6 +1080,9 @@ img {
   }
   .hero-title {
     font-size: 2.35rem;
+  }
+  .reels-grid {
+    grid-template-columns: 1fr;
   }
   .stats-row {
     grid-template-columns: 1fr;

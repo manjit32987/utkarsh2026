@@ -6,17 +6,49 @@
 document.addEventListener('DOMContentLoaded', () => {
   initCountdown();
   initSmoothScroll();
+  initLoopingVideos();
 });
+
+// Auto-play all videos on continuous loop without clicking
+function initLoopingVideos() {
+  const allVideos = document.querySelectorAll('.video-screen video, .reel-screen video');
+  allVideos.forEach(video => {
+    video.muted = true;
+    video.loop = true;
+    video.setAttribute('playsinline', '');
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        const startPlay = () => video.play();
+        document.addEventListener('click', startPlay, { once: true });
+        document.addEventListener('scroll', startPlay, { once: true });
+        document.addEventListener('touchstart', startPlay, { once: true });
+      });
+    }
+  });
+}
 
 // 1. Live Countdown Timer
 function initCountdown() {
-  const targetDate = new Date();
-  targetDate.setDate(targetDate.getDate() + 35);
-  targetDate.setHours(10, 0, 0, 0);
+  // Target: September 22 at 09:00 AM
+  const now = new Date();
+  let targetYear = now.getFullYear();
+  let targetDate = new Date(`${targetYear}-09-22T09:00:00`);
+  
+  // If September 22 of this year has already passed, count to next year's
+  if (now.getTime() > targetDate.getTime()) {
+    targetDate = new Date(`${targetYear + 1}-09-22T09:00:00`);
+  }
 
   function updateTimer() {
     const diff = targetDate.getTime() - new Date().getTime();
-    if (diff <= 0) return;
+    if (diff <= 0) {
+      document.getElementById('days').innerText = '00';
+      document.getElementById('hours').innerText = '00';
+      document.getElementById('minutes').innerText = '00';
+      document.getElementById('seconds').innerText = '00';
+      return;
+    }
 
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
     const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -112,8 +144,9 @@ function handleFormSubmit(event) {
 }
 
 // 4. Video Player Modal
-function openVideoPlayer(videoUrl, title) {
+function openVideoPlayer(videoUrl, title, isPortrait = false) {
   const modal = document.getElementById('videoModal');
+  const modalBox = document.getElementById('videoModalBox');
   const video = document.getElementById('modalActiveVideo');
   const source = document.getElementById('modalVideoSource');
   const titleEl = document.getElementById('modalVideoTitle');
@@ -122,6 +155,15 @@ function openVideoPlayer(videoUrl, title) {
     source.src = videoUrl;
     video.load();
     if (titleEl) titleEl.innerText = title || 'Utkarsh 5.0 Video';
+    
+    if (modalBox) {
+      if (isPortrait) {
+        modalBox.classList.add('portrait-mode');
+      } else {
+        modalBox.classList.remove('portrait-mode');
+      }
+    }
+
     modal.classList.add('open');
     document.body.style.overflow = 'hidden';
     video.play().catch((err) => console.log('Autoplay handled:', err));
@@ -130,11 +172,15 @@ function openVideoPlayer(videoUrl, title) {
 
 function closeVideoPlayer() {
   const modal = document.getElementById('videoModal');
+  const modalBox = document.getElementById('videoModalBox');
   const video = document.getElementById('modalActiveVideo');
 
   if (modal) {
     modal.classList.remove('open');
     document.body.style.overflow = '';
+  }
+  if (modalBox) {
+    modalBox.classList.remove('portrait-mode');
   }
   if (video) {
     video.pause();
@@ -204,6 +250,7 @@ Annual Inter-College Drone & Robotics Techfest
 ================================================================================
 
 • Organizer: Tripura Institute of Technology, Narsingarh, Agartala - 799009
+• Event Dates: Starting 22nd September
 • Expected Footfall: 1,500+ Engineering & Technical Students from across Tripura
 • Participating Institutes: All 9 Technical Colleges in Tripura (TIT, NITA, ICFAI, Techno, Polytechnics)
 • Utkarsh 4.0 Title Sponsor: Triumph Motorcycles
