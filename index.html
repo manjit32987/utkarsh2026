@@ -161,53 +161,104 @@
           <div class="badge-tag"><i class="fa-solid fa-star"></i> Flagship Events</div>
           <h2 class="section-title">Centerstage <span class="gradient-text">Highlights</span></h2>
           <p class="section-desc">
-            Utkarsh 5.0 bridges the gap between high-level technical engineering and vibrant cultural expression.
+            Utkarsh 5.0 bridges high-level technical engineering with vibrant youth culture. Watch authentic action footage from our headline festival showcases.
           </p>
         </div>
 
         <div class="hl-grid">
-          <div class="hl-card span-2">
-            <img src="https://images.unsplash.com/photo-1508614589041-895b88991e3e?auto=format&fit=crop&w=800&q=80" alt="Drone and Robotics" class="hl-img">
+          <!-- Highlight 1: Drone & Robotics -->
+          <div class="hl-card">
+            <div class="hl-video-screen">
+              <video autoplay loop muted playsinline preload="auto">
+                <source src="videos/hl_drone_robotics.mp4" type="video/mp4">
+              </video>
+              <div class="play-badge"><i class="fa-solid fa-circle" style="color: #ef4444; font-size: 0.55rem;"></i> Live Footage</div>
+              <button class="video-play-overlay" onclick="openVideoPlayer('videos/hl_drone_robotics.mp4', 'Inter-College Drone & Robotics Competition', false)" aria-label="Play with sound">
+                <i class="fa-solid fa-play"></i>
+              </button>
+            </div>
             <div class="hl-body">
               <span class="badge-tag">Technical Arena</span>
               <h3>Inter-College Drone & Robotics Competition</h3>
               <p>A high-stakes arena where the region's top engineering minds showcase cutting-edge hardware, aerial navigation, and combat robotics.</p>
+              <div class="hl-footer">
+                <span class="hl-tag-note"><i class="fa-solid fa-microchip"></i> Hardware & Combat Arena</span>
+                <button class="btn btn-sm btn-outline" onclick="openVideoPlayer('videos/hl_drone_robotics.mp4', 'Inter-College Drone & Robotics Competition', false)">
+                  <i class="fa-solid fa-expand"></i> Full Video
+                </button>
+              </div>
             </div>
           </div>
 
+          <!-- Highlight 2: Flash Mobs -->
           <div class="hl-card">
-            <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=600&q=80" alt="Flash Mobs" class="hl-img">
+            <div class="hl-video-screen">
+              <video autoplay loop muted playsinline preload="auto">
+                <source src="videos/hl_flashmob.mp4" type="video/mp4">
+              </video>
+              <div class="play-badge"><i class="fa-solid fa-circle" style="color: #ef4444; font-size: 0.55rem;"></i> Live Footage</div>
+              <button class="video-play-overlay" onclick="openVideoPlayer('videos/hl_flashmob.mp4', 'High-Energy Flash Mobs', false)" aria-label="Play with sound">
+                <i class="fa-solid fa-play"></i>
+              </button>
+            </div>
             <div class="hl-body">
               <span class="badge-tag">Crowd Sensation</span>
               <h3>High-Energy Flash Mobs</h3>
-              <p>Spontaneous, highly choreographed performances guaranteed to draw massive, engaged crowds.</p>
+              <p>Spontaneous, highly choreographed performances guaranteed to draw massive, engaged crowds across the TIT campus.</p>
+              <div class="hl-footer">
+                <span class="hl-tag-note"><i class="fa-solid fa-users"></i> Campus Engagement</span>
+                <button class="btn btn-sm btn-outline" onclick="openVideoPlayer('videos/hl_flashmob.mp4', 'High-Energy Flash Mobs', false)">
+                  <i class="fa-solid fa-expand"></i> Full Video
+                </button>
+              </div>
             </div>
           </div>
 
+          <!-- Highlight 3: Extreme Cyclist Shows -->
           <div class="hl-card">
-            <img src="https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=600&q=80" alt="Extreme Cyclist" class="hl-img">
+            <div class="hl-video-screen">
+              <video autoplay loop muted playsinline preload="auto">
+                <source src="videos/hl_cyclist.mp4" type="video/mp4">
+              </video>
+              <div class="play-badge"><i class="fa-solid fa-circle" style="color: #ef4444; font-size: 0.55rem;"></i> Live Footage</div>
+              <button class="video-play-overlay" onclick="openVideoPlayer('videos/hl_cyclist.mp4', 'Extreme Cyclist Shows', false)" aria-label="Play with sound">
+                <i class="fa-solid fa-play"></i>
+              </button>
+            </div>
             <div class="hl-body">
               <span class="badge-tag">Adrenaline Stunts</span>
               <h3>Extreme Cyclist Shows</h3>
-              <p>Adrenaline-pumping stunt performances showcasing incredible athletic skill.</p>
+              <p>Adrenaline-pumping stunt performances showcasing incredible athletic skill, high jumps, and BMX acrobatics.</p>
+              <div class="hl-footer">
+                <span class="hl-tag-note"><i class="fa-solid fa-bicycle"></i> Stunt & Action Zone</span>
+                <button class="btn btn-sm btn-outline" onclick="openVideoPlayer('videos/hl_cyclist.mp4', 'Extreme Cyclist Shows', false)">
+                  <i class="fa-solid fa-expand"></i> Full Video
+                </button>
+              </div>
             </div>
           </div>
 
+          <!-- Highlight 4: Live Band Performances -->
           <div class="hl-card">
-            <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=600&q=80" alt="Live Band" class="hl-img">
+            <div class="hl-video-screen">
+              <video autoplay loop muted playsinline preload="auto">
+                <source src="videos/hl_live_band.mp4" type="video/mp4">
+              </video>
+              <div class="play-badge"><i class="fa-solid fa-circle" style="color: #ef4444; font-size: 0.55rem;"></i> Live Footage</div>
+              <button class="video-play-overlay" onclick="openVideoPlayer('videos/hl_live_band.mp4', 'Live Band Performances', false)" aria-label="Play with sound">
+                <i class="fa-solid fa-play"></i>
+              </button>
+            </div>
             <div class="hl-body">
               <span class="badge-tag">Concert Venue</span>
               <h3>Live Band Performances</h3>
-              <p>Headlining musical acts that will transform the campus into a sprawling concert venue.</p>
-            </div>
-          </div>
-
-          <div class="hl-card">
-            <img src="https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?auto=format&fit=crop&w=600&q=80" alt="Open Mic" class="hl-img">
-            <div class="hl-body">
-              <span class="badge-tag">Creative Platform</span>
-              <h3>Open Mic Sessions</h3>
-              <p>A creative platform amplifying the voices, poetry, and musical talents of our diverse student body.</p>
+              <p>Headlining musical acts and live rock performances that transform the campus into a sprawling, high-voltage concert venue.</p>
+              <div class="hl-footer">
+                <span class="hl-tag-note"><i class="fa-solid fa-guitar"></i> Rock & Musical Night</span>
+                <button class="btn btn-sm btn-outline" onclick="openVideoPlayer('videos/hl_live_band.mp4', 'Live Band Performances', false)">
+                  <i class="fa-solid fa-expand"></i> Full Video
+                </button>
+              </div>
             </div>
           </div>
         </div>

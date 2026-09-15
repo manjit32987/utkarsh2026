@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Auto-play all videos on continuous loop without clicking
 function initLoopingVideos() {
-  const allVideos = document.querySelectorAll('.video-screen video, .reel-screen video');
+  const allVideos = document.querySelectorAll('.video-screen video, .reel-screen video, .hl-video-screen video, .hl-card video');
   allVideos.forEach(video => {
     video.muted = true;
     video.loop = true;
