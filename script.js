@@ -10,23 +10,54 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileNav();
 });
 
-// Auto-play all videos on continuous loop without clicking
+// High-Performance Lazy Video Playback: Only plays videos currently in viewport
 function initLoopingVideos() {
   const allVideos = document.querySelectorAll('.video-screen video, .reel-screen video, .hl-video-screen video, .hl-card video');
+  
   allVideos.forEach(video => {
     video.muted = true;
     video.loop = true;
     video.setAttribute('playsinline', '');
-    const playPromise = video.play();
-    if (playPromise !== undefined) {
-      playPromise.catch(() => {
-        const startPlay = () => video.play();
-        document.addEventListener('click', startPlay, { once: true });
-        document.addEventListener('scroll', startPlay, { once: true });
-        document.addEventListener('touchstart', startPlay, { once: true });
-      });
-    }
+    video.setAttribute('preload', 'metadata');
   });
+
+  // Smart IntersectionObserver: Pauses off-screen videos to save GPU & CPU decoders
+  if ('IntersectionObserver' in window) {
+    const videoObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const video = entry.target;
+        if (entry.isIntersecting) {
+          const playPromise = video.play();
+          if (playPromise !== undefined) {
+            playPromise.catch(() => {
+              const playOnGesture = () => {
+                if (entry.isIntersecting) video.play();
+              };
+              document.addEventListener('click', playOnGesture, { once: true });
+              document.addEventListener('scroll', playOnGesture, { once: true });
+              document.addEventListener('touchstart', playOnGesture, { once: true });
+            });
+          }
+        } else {
+          // Pause off-screen video instantly to prevent dropped frames & GPU overload
+          if (!video.paused) {
+            video.pause();
+          }
+        }
+      });
+    }, {
+      root: null,
+      threshold: 0.1,
+      rootMargin: '120px 0px 120px 0px'
+    });
+
+    allVideos.forEach(video => videoObserver.observe(video));
+  } else {
+    // Fallback for older browsers
+    allVideos.forEach(video => {
+      video.play().catch(() => {});
+    });
+  }
 }
 
 // 1. Live Countdown Timer

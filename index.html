@@ -12,7 +12,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
-  <link rel="stylesheet" href="style.css?v=5.0">
+  <link rel="stylesheet" href="style.css?v=5.1">
 </head>
 <body>
 
@@ -169,7 +169,7 @@
           <!-- Highlight 1: Drone & Robotics -->
           <div class="hl-card">
             <div class="hl-video-screen">
-              <video autoplay loop muted playsinline preload="auto">
+              <video autoplay loop muted playsinline preload="metadata">
                 <source src="videos/hl_drone_robotics.mp4" type="video/mp4">
               </video>
               <div class="play-badge"><i class="fa-solid fa-circle" style="color: #ef4444; font-size: 0.55rem;"></i> Live Footage</div>
@@ -193,7 +193,7 @@
           <!-- Highlight 2: Flash Mobs -->
           <div class="hl-card">
             <div class="hl-video-screen">
-              <video autoplay loop muted playsinline preload="auto">
+              <video autoplay loop muted playsinline preload="metadata">
                 <source src="videos/hl_flashmob.mp4" type="video/mp4">
               </video>
               <div class="play-badge"><i class="fa-solid fa-circle" style="color: #ef4444; font-size: 0.55rem;"></i> Live Footage</div>
@@ -217,11 +217,11 @@
           <!-- Highlight 3: Extreme Cyclist Shows -->
           <div class="hl-card">
             <div class="hl-video-screen">
-              <video autoplay loop muted playsinline preload="auto">
+              <video autoplay loop muted playsinline preload="metadata">
                 <source src="videos/hl_cyclist.mp4" type="video/mp4">
               </video>
               <div class="play-badge"><i class="fa-solid fa-circle" style="color: #ef4444; font-size: 0.55rem;"></i> Live Footage</div>
-              <button class="video-play-overlay" onclick="openVideoPlayer('videos/hl_cyclist.mp4', 'Extreme Cyclist Shows', false)" aria-label="Play with sound">
+              <button class="video-play-overlay" onclick="openVideoPlayer('videos/hl_cyclist.mp4', 'Extreme Cyclist Shows', true)" aria-label="Play with sound">
                 <i class="fa-solid fa-play"></i>
               </button>
             </div>
@@ -231,7 +231,7 @@
               <p>Adrenaline-pumping stunt performances showcasing incredible athletic skill, high jumps, and BMX acrobatics.</p>
               <div class="hl-footer">
                 <span class="hl-tag-note"><i class="fa-solid fa-bicycle"></i> Stunt & Action Zone</span>
-                <button class="btn btn-sm btn-outline" onclick="openVideoPlayer('videos/hl_cyclist.mp4', 'Extreme Cyclist Shows', false)">
+                <button class="btn btn-sm btn-outline" onclick="openVideoPlayer('videos/hl_cyclist.mp4', 'Extreme Cyclist Shows', true)">
                   <i class="fa-solid fa-expand"></i> Full Video
                 </button>
               </div>
@@ -241,7 +241,7 @@
           <!-- Highlight 4: Live Band Performances -->
           <div class="hl-card">
             <div class="hl-video-screen">
-              <video autoplay loop muted playsinline preload="auto">
+              <video autoplay loop muted playsinline preload="metadata">
                 <source src="videos/hl_live_band.mp4" type="video/mp4">
               </video>
               <div class="play-badge"><i class="fa-solid fa-circle" style="color: #ef4444; font-size: 0.55rem;"></i> Live Footage</div>
@@ -287,7 +287,7 @@
           <div class="video-box">
             <div class="video-screen">
               <span class="play-badge"><i class="fa-solid fa-bicycle"></i> Part 1 • Flashmob & BMX Stunts</span>
-              <video autoplay loop muted playsinline preload="auto">
+              <video autoplay loop muted playsinline preload="metadata">
                 <source src="videos/landscape_flashmob_bmx_1.mp4" type="video/mp4">
                 Your browser does not support HTML5 video.
               </video>
@@ -308,7 +308,7 @@
           <div class="video-box">
             <div class="video-screen">
               <span class="play-badge"><i class="fa-solid fa-person-skating"></i> Part 2 • Skateboard & BMX Stunts</span>
-              <video autoplay loop muted playsinline preload="auto">
+              <video autoplay loop muted playsinline preload="metadata">
                 <source src="videos/landscape_flashmob_bmx_2.mp4" type="video/mp4">
                 Your browser does not support HTML5 video.
               </video>
@@ -337,7 +337,7 @@
           <div class="reel-box">
             <div class="reel-screen">
               <span class="reel-badge"><i class="fa-solid fa-fire"></i> Reel 1 • Campus Vibe</span>
-              <video autoplay loop muted playsinline preload="auto">
+              <video autoplay loop muted playsinline preload="metadata">
                 <source src="videos/portrait_reel_1.mp4" type="video/mp4">
               </video>
               <button class="reel-play-overlay" onclick="openVideoPlayer('videos/portrait_reel_1.mp4', 'Utkarsh Campus Vibe & Drone Highlights (Reel 1)', true)" aria-label="Play Reel 1">
@@ -357,7 +357,7 @@
           <div class="reel-box">
             <div class="reel-screen">
               <span class="reel-badge"><i class="fa-solid fa-bolt"></i> Reel 2 • High Voltage</span>
-              <video autoplay loop muted playsinline preload="auto">
+              <video autoplay loop muted playsinline preload="metadata">
                 <source src="videos/portrait_reel_2.mp4" type="video/mp4">
               </video>
               <button class="reel-play-overlay" onclick="openVideoPlayer('videos/portrait_reel_2.mp4', 'High-Octane Action & Celebrations (Reel 2)', true)" aria-label="Play Reel 2">
@@ -377,7 +377,7 @@
           <div class="reel-box">
             <div class="reel-screen">
               <span class="reel-badge"><i class="fa-solid fa-star"></i> Reel 3 • Behind the Scenes</span>
-              <video autoplay loop muted playsinline preload="auto">
+              <video autoplay loop muted playsinline preload="metadata">
                 <source src="videos/portrait_reel_3.mov" type="video/mp4">
                 <source src="videos/portrait_reel_3.mov" type="video/quicktime">
               </video>
@@ -398,7 +398,7 @@
           <div class="reel-box">
             <div class="reel-screen">
               <span class="reel-badge"><i class="fa-solid fa-crosshairs"></i> Reel 4 • Drone Action</span>
-              <video autoplay loop muted playsinline preload="auto">
+              <video autoplay loop muted playsinline preload="metadata">
                 <source src="videos/utkarsh4_drone_action.mp4" type="video/mp4">
               </video>
               <button class="reel-play-overlay" onclick="openVideoPlayer('videos/utkarsh4_drone_action.mp4', 'Utkarsh 4.0 Drone Arena & Combat Action (Reel 4)', true)" aria-label="Play Reel 4">
@@ -418,7 +418,7 @@
           <div class="reel-box">
             <div class="reel-screen">
               <span class="reel-badge"><i class="fa-solid fa-film"></i> Reel 5 • Aftermovie</span>
-              <video autoplay loop muted playsinline preload="auto">
+              <video autoplay loop muted playsinline preload="metadata">
                 <source src="videos/utkarsh4_aftermovie_recap.mp4" type="video/mp4">
               </video>
               <button class="reel-play-overlay" onclick="openVideoPlayer('videos/utkarsh4_aftermovie_recap.mp4', 'Utkarsh 4.0 Festival Aftermovie (Reel 5)', true)" aria-label="Play Reel 5">
@@ -438,7 +438,7 @@
           <div class="reel-box">
             <div class="reel-screen">
               <span class="reel-badge"><i class="fa-solid fa-ribbon"></i> Reel 6 • Grand Opening</span>
-              <video autoplay loop muted playsinline preload="auto">
+              <video autoplay loop muted playsinline preload="metadata">
                 <source src="videos/utkarsh4_opening_ceremony.mp4" type="video/mp4">
               </video>
               <button class="reel-play-overlay" onclick="openVideoPlayer('videos/utkarsh4_opening_ceremony.mp4', 'Grand Opening Ceremony at Civil Block (Reel 6)', true)" aria-label="Play Reel 6">
@@ -939,6 +939,6 @@
     <span id="toastText">Your request has been received!</span>
   </div>
 
-  <script src="script.js?v=5.0"></script>
+  <script src="script.js?v=5.1"></script>
 </body>
 </html>
